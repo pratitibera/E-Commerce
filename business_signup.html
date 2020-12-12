@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Putattoe Template">
+    <meta name="keywords" content="Putattoe, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Putatoe | Business Signup</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <!-- Author - Rishi Soni -->
+    <link rel="stylesheet" href="css/header_footer.css" type="text/css">
+
+    <style>
+        /* width */
+        textarea::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        /* Track */
+        textarea::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        /* Handle */
+        textarea::-webkit-scrollbar-thumb {
+            background: #00838f;
+        }
+
+        /* Handle on hover */
+        textarea::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        ::placeholder {
+            color: grey !important;
+        }
+
+        /* Business Form */
+        .business__form__body {
+            border: 5px solid rgba(0, 131, 143, 0.4);
+            border-radius: 10px;
+            -webkit-box-shadow: 5px 5px 10px lightgrey;
+            box-shadow: 5px 5px 10px lightgrey;
+        }
+
+        .business__form__heading {
+            color: #00838f;
+            font-weight: bold;
+        }
+
+        .business__form__heading span {
+            padding-right: 60px;
+            padding-bottom: 7px;
+            border-bottom: 3.5px solid grey;
+        }
+
+        @media screen and (max-width: 576px) {
+            .business__form__heading {
+                text-align: center;
+            }
+
+            .business__form__heading span {
+                padding-right: 0px;
+                padding-bottom: 4px;
+                border-bottom: 3px solid grey;
+            }
+        }
+
+        .map__button {
+            background: #00838f;
+            transition: 0.5s;
+            color: white;
+            letter-spacing: 1px;
+        }
+
+        .map__button i {
+            font-size: 1.3rem;
+            vertical-align: -2.5px;
+        }
+
+        .business__form__save__btn,
+        .business__form__cancel__btn {
+            float: right;
+            margin-left: 5px;
+            color: white;
+            transition: 0.5s;
+            font-size: 0.88em;
+            letter-spacing: 1px;
+            padding: 5px 20px;
+        }
+
+        @media screen and (max-width: 768px) {
+
+            .business__form__save__btn,
+            .business__form__cancel__btn {
+                float: left;
+                margin-left: 0;
+                margin-right: 5px;
+            }
+        }
+
+        .business__form__save__btn {
+            background-color: #00838f;
+        }
+
+        .business__form__cancel__btn {
+            background-color: #ec407a;
+        }
+
+        .map__button:hover,
+        .business__form__save__btn:hover {
+            background: #006064;
+            color: white;
+        }
+
+        .business__form__cancel__btn:hover {
+            background: #c2185b;
+            color: white;
+        }
+
+        label {
+            color: grey;
+        }
+
+        option[value="0"] {
+            background: rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body onload="serviceCategory()">
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Humberger Begin -->
+    <div class="humberger__menu__overlay"></div>
+    <div class="humberger__menu__wrapper p-0">
+
+        <!-- Profile and Login Signup -->
+        <div class="humberger__login__profile">
+            <div class="row">
+                <div class="col-4">
+                    <img src="img/logo.png" class="rounded-circle" alt="Putatoe_Logo" />
+                </div>
+                <div class="col-8 pt-3">
+                    <a href="login.html" class="humberger_login_link">Login or Signup</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Lists -->
+        <div class="humberger__nav__links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Category</a></li>
+                <li><a href="#">Today Deals</a></li>
+                <hr>
+                <li><a href="#">Your Orders</a></li>
+                <li><a href="#">Buy Again</a></li>
+                <li><a href="#">Your Wishlist</a></li>
+                <li><a href="#">Your Account</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Customer Service</a></li>
+                <li><a href="#">Log Out</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <!-- Humberger End -->
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container-fluid">
+            <div class="row top">
+                <!-- Brand Name and Logo -->
+                <div class="col-lg-3">
+                    <div class="header__logo">
+                        <a href="./index.html">
+                            <span class="pl-lg-3 brand-name"><b>PUTATOE</b></span>
+                            <img src="img/logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Search Field and Categories -->
+                <div class="col-lg-6 header__search__field">
+
+                    <!-- Search Field -->
+                    <div class="input-group form-lg pt-lg-3">
+                        <div class="input-group-prepend bg-light header__location__button">
+                            <button class="btn rounded-0" type="button">Select Location <i
+                                    class="fa fa-map-marker"></i></button>
+                        </div>
+                        <input class="form-control border-0" id="search-1" name="MobSearchBar" type="text"
+                            placeholder="Search Products" aria-label="Search">
+                        <div class="input-group-append">
+                            <span class="input-group-text bg-white border-0" id="mob-search-icon">
+                                <i class="fa fa-search" aria-hidden="true"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Links, User, Cart Option -->
+                <div class="col-lg-3 pt-lg-3 header__social__user__account">
+
+                    <!-- Social Links -->
+                    <div class="header__social__icons float-right pr-4">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="humberger__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Main Business Form Start -->
+    <main>
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="business__form__body p-lg-4 p-3">
+
+                        <!-- Form Heading -->
+                        <div class="mb-md-5 mb-4">
+                            <h4 class="business__form__heading"><span>BUSINESS SIGNUP</span></h4>
+                        </div>
+
+                        <!-- Form Fields -->
+                        <form name="register_seller" onsubmit="event.preventDefault(); registerSeller();">
+
+                            <!-- Business Name -->
+                            <div class="form-group row">
+                                <label for="business_name" class="col-lg-3 col-form-label">Business Name :
+                                    <span class="text-danger" id="business_name_req">*</span>
+                                </label>
+                                <div class="col-lg-9">
+                                    <input type="text" class="form-control" id="business_name" value=""
+                                        name="business_name" placeholder="Business Name..." required />
+
+                                </div>
+                            </div>
+
+                            <!-- Service Category -->
+                            <div class="form-group row">
+                                <label for="service_category" class="col-lg-3 col-form-label">Service Category :
+                                    <span class="text-danger" id="service_category_req">*</span>
+                                </label>
+                                <div class="col-lg-9 input-group" id="service_category_list">
+                                </div>
+                            </div>
+
+                            <!-- Mobile Number -->
+                            <div class="form-group row">
+                                <label for="contact_number" class="col-lg-3 col-form-label">Mobile Number :
+                                    <span class="text-danger" id="contact_number_req">*</span>
+                                </label>
+                                <div class="col-lg-9 input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="country_code">+91</span>
+                                    </div>
+                                    <input type="tel" class="form-control" placeholder="Mobile Number..." value=""
+                                        name="contact_number" id="contact_number" aria-describedby="country_code"
+                                        maxlength="10" minlength="10" required />
+                                </div>
+                            </div>
+
+                            <!-- Whatsapp Number -->
+                            <div class="form-group row">
+                                <label for="whatsapp_number" class="col-lg-3 col-form-label">Whatsapp Number :
+                                    <span class="text-danger" id="whatsapp_number_req">*</span>
+                                </label>
+                                <div class="col-lg-9">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="country_code">+91</span>
+                                        </div>
+                                        <input type="tel" class="form-control" placeholder="Whatsapp Number..." value=""
+                                            name="whatsapp_number" id="whatsapp_number" aria-describedby="country_code"
+                                            maxlength="10" minlength="10" />
+                                    </div>
+
+                                    <!-- Checkbox For "Same as Mobile Number" -->
+                                    <div class="form-group ml-3">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="wp_number"
+                                                onchange="sameAsMobileNumber()" />
+                                            <label class="custom-control-label" for="wp_number">Same as Mobile
+                                                Number</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Email Address -->
+                            <div class="form-group row mt-n3">
+                                <label for="email_address" class="col-lg-3 col-form-label">Email Address :
+                                    <span class="text-danger" id="email_address_req">*</span>
+                                </label>
+                                <div class="col-lg-9">
+                                    <input type="email" class="form-control" id="email_address" value=""
+                                        name="email_address" placeholder="example@gmail.com">
+                                </div>
+                            </div>
+
+                            <!-- Serviceable Area -->
+                            <div class="form-group row">
+                                <label for="service_area" class="col-lg-3 col-form-label">Serviceable Area (km):
+                                    <span class="text-danger" id="service_area_req">*</span>
+                                </label>
+                                <div class="col-lg-9">
+                                    <input type="number" class="form-control" id="service_area" value=""
+                                        name="service_area" required>
+                                </div>
+                            </div>
+
+                            <!-- Service Description -->
+                            <div class="form-group row">
+                                <label for="service_description" class="col-lg-3 col-form-label">Service Description:
+                                    <span class="text-danger" id="service_description_req">*</span>
+                                </label>
+                                <div class="col-lg-9">
+                                    <textarea name="service_description" class="form-control" id="service_description"
+                                        rows="3" required></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Discount on Total Amount -->
+                            <div class="form-group row">
+                                <label for="discount" class="col-lg-3 col-form-label">Discount on Total Amount:
+                                    <span class="text-danger" id="discount_req">*</span>
+                                </label>
+                                <div class="col-lg-9 input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="in_percent">in&nbsp;(%)</span>
+                                    </div>
+                                    <input type="number" class="form-control" id="discount" value="0" name="discount"
+                                        min="0" max="100%" required>
+                                </div>
+                            </div>
+
+                            <!-- Home Delivery Available -->
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label">Home Delivery Available :
+                                    <span class="text-danger" id="home_delivery_req">*</span>
+                                </label>
+                                <div class="col-lg-9 mt-2">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="home_delivery_yes" name="home_delivery_available"
+                                            class="custom-control-input" required>
+                                        <label class="custom-control-label" for="home_delivery_yes">YES</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="home_delivery_no" name="home_delivery_available"
+                                            class="custom-control-input" checked required />
+                                        <label class="custom-control-label" for="home_delivery_no">NO</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Type of Business -->
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label">Type of Business :
+                                    <span class="text-danger" id="business_type_req">*</span>
+                                </label>
+                                <div class="col-lg-9 mt-2">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="business_type_movable" name="business_type"
+                                            class="custom-control-input" required />
+                                        <label class="custom-control-label" for="business_type_movable">Movable</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="business_type_unmovable" name="business_type"
+                                            class="custom-control-input" checked required />
+                                        <label class="custom-control-label"
+                                            for="business_type_unmovable">Unmovable</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Address -->
+                            <div class="form-group row">
+                                <label for="address" class="col-lg-3 col-form-label">Address :</label>
+                                <div class="col-lg-9">
+                                    <textarea name="address" class="form-control" id="address" readonly
+                                        rows="3">Click on (Locate Me / Edit Location)</textarea>
+                                </div>
+                            </div>
+
+                            <!-- Location -->
+                            <div class="form-group row">
+                                <label for="location" class="col-lg-3 col-form-label">Location :</label>
+                                <div class="col-lg-9">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <a href="#" class="btn btn-block mt-2 map__button" onclick="locateMe()">
+                                                <i class="fa fa-map-marker"></i> LOCATE ME
+                                            </a>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <a href="#" class="btn btn-block mt-2 map__button" data-toggle="modal"
+                                                onclick="openEditAddressModal()"><i class="fa fa-edit"></i>
+                                                EDIT LOCATION
+                                            </a>
+                                            <!-- data-target="#editLocationModal" -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Shop Visible -->
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label">Shop Active Status :
+                                    <span class="text-danger" id="shop_visible_req">*</span>
+                                </label>
+                                <div class="col-lg-9 mt-2">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="shop_visible_yes" name="shop_visible"
+                                            class="custom-control-input" checked />
+                                        <label class="custom-control-label" for="shop_visible_yes">YES</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="shop_visible_no" name="shop_visible"
+                                            class="custom-control-input" />
+                                        <label class="custom-control-label" for="shop_visible_no">NO</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Save, Cancel Button -->
+                            <div class="form-group row">
+                                <div class="col-md-6 offset-md-6 mt-3">
+                                    <button type="submit" class="btn business__form__save__btn">SAVE AS</button>
+                                    <button type="reset" class="btn business__form__cancel__btn">CANCEL</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Main Business Form Start -->
+
+    <!-- Edit Location Modal will target when 'Edit Location Button' -->
+    <div class="modal fade" id="editLocationModal" tabindex="-1" role="dialog" aria-labelledby="editLocationModalTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title business__form__heading" id="editLocationModalLongTitle">EDIT
+                        ADDRESS :</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="mx-4">
+
+                        <div class="form-group ">
+                            <label for="inputAddress1">Address Line 1</label>
+                            <span class="text-danger" id="addressReqd1">*</span>
+                            <input type="text" class="form-control" id="inputAddress1" placeholder="1234 Main St"
+                                maxlength="300" value="" required>
+                        </div>
+                        <div class="form-group ">
+                            <label for="inputAddress2">Address Line 2</label>
+                            <input type="text" class="form-control" id="inputAddress2"
+                                placeholder="Apartment, studio, or floor" value="" maxlength="100">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputCountry">Country</label>
+                            <span class="text-danger" id="countryReqd">*</span>
+                            <input type="text" class="form-control" id="inputCountry" placeholder="India" value="India"
+                                maxlength="20">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputCountry">Landmark</label>
+                            <input type="text" class="form-control" id="inputLandmark" value="" maxlength="300">
+                        </div>
+                        <div class="form-row ">
+                            <div class="form-group col-md-6">
+                                <label for="inputState">state</label>
+                                <span class="text-danger" id="stateReqd">*</span>
+                                <input type="text" class="form-control" id="inputState" value=""
+                                    placeholder="Maharashtra" maxlength="20" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputTown">town</label>
+                                <span class="text-danger" id="townReqd">*</span>
+                                <input type="text" class="form-control" id="inputTown" value="" placeholder="Mumbai"
+                                    maxlength="50" required>
+                            </div>
+                        </div>
+                        <div class="form-row ">
+                            <div class="form-group col-md-6">
+                                <label for="inputDistrict">District</label>
+                                <span class="text-danger" id="districtReqd">*</span>
+                                <input type="text" class="form-control" id="inputDistrict" value=""
+                                    placeholder="Gorakhpur" required />
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputZip">Pincode</label>
+                                <span class="text-danger" id="zipcodeReqd">*</span>
+                                <input type="number" class="form-control" id="inputZip" value="" minlength="6"
+                                    maxlength="6" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="btn business__form__cancel__btn"
+                                data-dismiss="modal">Close</button>
+                            <button type="button" class="btn business__form__save__btn" onclick="editAddress();">Save
+                                Address</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- <div class="modal-footer"> -->
+
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section Begin -->
+    <footer class="footer spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <div class="footer__about__logo">
+                            <a href="./index.html"><img src="img/logo.png" alt="" height="90" width="90"></a>
+                        </div>
+                        <div class="footer__about__brand">
+                            <p>PUTATOE TECHNOLOGIES PVT. LTD.</p>
+                        </div>
+                        <div class="row footer__about__address mt-4">
+                            <div class="col-md-3">
+                                <p class="font-weight-bold">ADDRESS:</p>
+                            </div>
+                            <div class="col-md-9 pl-3">
+                                <p>233 Harahawa Phatak,</p>
+                                <p>Near SBI Bank, Gorakhpur,</p>
+                                <p>Uttar Pradesh - 273001</p>
+                            </div>
+                        </div>
+                        <div class="input-group footer__about__contact mt-4">
+                            <a href="#" class="btn"><i class="fa fa-envelope"></i> Email</a>
+                            <a href="#" class="btn"><i class="fa fa-phone"></i> Contact</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 offset-lg-1">
+                    <div class="footer__widget">
+                        <h6>Useful Links</h6>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="footer__widget">
+                        <h6>Join Our Newsletter Now</h6>
+                        <p>Get E-mail updates about our latest shop and special offers.</p>
+                        <form action="#">
+                            <input type="text" placeholder="Enter your mail">
+                            <button type="submit" class="footer__subscribe__btn">Subscribe</button>
+                        </form>
+                        <div class="footer__widget__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/controllers/business_signup.js"></script>
+
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-firestore.js"></script>
+
+
+</body>
+
+</html>

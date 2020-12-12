@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Putattoe Template">
+    <meta name="keywords" content="Putattoe, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Putatoe | Base</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/header_footer.css" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="css/product_details.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/t4t5/sweetalert/32bd141c/dist/sweetalert.css">
+    <style>
+        body {
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Humberger Begin -->
+    <div class="humberger__menu__overlay"></div>
+    <div class="humberger__menu__wrapper p-0">
+
+        <!-- Profile and Login Signup -->
+        <div class="humberger__login__profile">
+            <div class="row">
+                <div class="col-4">
+                    <img src="img/logo.png" class="rounded-circle" alt="Putatoe_Logo" />
+                </div>
+                <div class="col-8 pt-3">
+                    <a href="login.html" class="humberger_login_link">Login or Signup</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Lists -->
+        <div class="humberger__nav__links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Category</a></li>
+                <li><a href="#">Today Deals</a></li>
+                <hr>
+                <div id="humberger__services"></div>
+                <hr>
+                <li><a href="#">Your Orders</a></li>
+                <li><a href="#">Buy Again</a></li>
+                <li><a href="#">Your Wishlist</a></li>
+                <li><a href="#">Your Account</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Customer Service</a></li>
+                <li><a href="#">Log Out</a></li>
+            </ul>
+        </div>
+        
+
+    </div>
+    <!-- Humberger End -->
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container-fluid pb-1">
+            <div class="row top">
+                <!-- Brand Name and Logo -->
+                <div class="col-lg-3">
+                    <div class="header__logo">
+                        <a href="./index.html">
+                            <span class="pl-lg-3 brand-name"><b>PUTATOE</b></span>
+                            <img src="img/logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Search Field and Categories -->
+                <div class="col-lg-4 header__search__field">
+
+                    <!-- Search Field -->
+                    <div class="input-group form-lg pt-lg-4">
+                        <div class="input-group-prepend bg-light header__location__button">
+                            <button class="btn rounded-0" type="button">Select Location <i
+                                    class="fa fa-map-marker"></i></button>
+                        </div>
+                        <input class="form-control border-0" id="search-1" name="MobSearchBar" type="text"
+                            placeholder="Search Products" aria-label="Search">
+                        <div class="input-group-append">
+                            <span class="input-group-text bg-white border-0" id="mob-search-icon">
+                            <i class="fa fa-search" aria-hidden="true"></i></span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-2 pt-lg-4 header__social__user__account">
+                    <div class="dropdown">
+                        <button class="btn drop"><i class="fa fa-shopping-cart fa-2x"></i><b>MY BASKET</b></button>
+                        <div class="dropdown-content">
+                            <div style="height: 240px; overflow-y: scroll;">
+                                <div class="card">
+                                    <div class="row no-gutters">
+                                        <div class="col-md-3">
+                                            <img src="img/cart.jpg" height="105" width="100">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <p class="cart_item">Classmate Notebook - A4 Long, unruled, 240 pages</p>
+                                            <p class="cart_item">2 x 125 = 250</p>
+                                        </div>
+                                        <div class="col-md-3" style="padding: 8px;">
+                                            <input class="cart-quantity-input" type="button" onclick="decrementValue()" value="-" style="width: 18%;">
+                                            <input class="cart-quantity-input" type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="number">
+                                            <input class="cart-quantity-input" type="button" onclick="incrementValue()" value="+" style="width: 18%;">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <p class="cart_item_details"><b>Rs 250</b><br><span style="font-size: 12px;">Saved Rs 65</span></p>
+                                            <button class="btn" type="button" style="background-color: #f2f2f2; font-size: 14px;">REMOVE</button>
+                                        </div>
+                                    </div> 
+                                </div><br> <!--- end of one card-->
+                                <div class="card">
+                                    <div class="row no-gutters">
+                                        <div class="col-md-3">
+                                            <img src="img/cart.jpg" height="105" width="100">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <p class="cart_item">Classmate Notebook - A4 Long, unruled, 240 pages</p>
+                                            <p class="cart_item">2 x 125 = 250</p>
+                                        </div>
+                                        <div class="col-md-3" style="padding: 8px;">
+                                            <input class="cart-quantity-input" type="button" onclick="decrementValue()" value="-" style="width: 18%;">
+                                            <input class="cart-quantity-input" type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="number">
+                                            <input class="cart-quantity-input" type="button" onclick="incrementValue()" value="+" style="width: 18%;">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <p class="cart_item_details"><b>Rs 250</b><br><span style="font-size: 12px;">Saved Rs 65</span></p>
+                                            <button class="btn" type="button" style="background-color: #f2f2f2; font-size: 14px;">REMOVE</button>
+                                        </div>
+                                    </div> 
+                                </div><br> <!--- end of one card-->
+                                <div class="card">
+                                    <div class="row no-gutters">
+                                        <div class="col-md-3">
+                                            <img src="img/cart.jpg" height="105" width="100">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <p class="cart_item">Classmate Notebook - A4 Long, unruled, 240 pages</p>
+                                            <p class="cart_item">2 x 125 = 250</p>
+                                        </div>
+                                        <div class="col-md-3" style="padding: 8px;">
+                                            <input class="cart-quantity-input" type="button" onclick="decrementValue()" value="-" style="width: 18%;">
+                                            <input class="cart-quantity-input" type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="number">
+                                            <input class="cart-quantity-input" type="button" onclick="incrementValue()" value="+" style="width: 18%;">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <p class="cart_item_details"><b>Rs 250</b><br><span style="font-size: 12px;">Saved Rs 65</span></p>
+                                            <button class="btn" type="button" style="background-color: #f2f2f2; font-size: 14px;">REMOVE</button>
+                                        </div>
+                                    </div> 
+                                </div><br> <!--- end of one card-->
+                                <div class="card">
+                                    <div class="row no-gutters">
+                                        <div class="col-md-3">
+                                            <img src="img/cart.jpg" height="105" width="100">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <p class="cart_item">Classmate Notebook - A4 Long, unruled, 240 pages</p>
+                                            <p class="cart_item">2 x 125 = 250</p>
+                                        </div>
+                                        <div class="col-md-3" style="padding: 8px;">
+                                            <input class="cart-quantity-input" type="button" onclick="decrementValue()" value="-" style="width: 18%;">
+                                            <input class="cart-quantity-input" type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="number">
+                                            <input class="cart-quantity-input" type="button" onclick="incrementValue()" value="+" style="width: 18%;">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <p class="cart_item_details"><b>Rs 250</b><br><span style="font-size: 12px;">Saved Rs 65</span></p>
+                                            <button class="btn" type="button" style="background-color: #f2f2f2; font-size: 14px;">REMOVE</button>
+                                        </div>
+                                    </div> 
+                                </div><br> <!--- end of one card-->
+                            </div>
+                            <button class="btn btn-lg">Total: Rs 1250</button>
+                            <button class="btn btn-lg">View Basket and Checkout</button>
+                            <button class="btn btn-lg">Clear Cart</button>   
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-1 pt-lg-4 header__social__user__account">
+                    <button class="btn" style="font-weight: 600; background: white;"><a href="login.html" style="color: #00838f;">Login</a></button>
+                </div>
+
+                <!-- Social Links, User, Cart Option -->
+                <div class="col-lg-2 pt-lg-4 header__social__user__account">
+
+                    <!-- Social Links -->
+                    <div class="header__social__icons float-right pr-4">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="humberger__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+    <br><div class="container">
+        <div class="row">
+            
+            <div class="col-sm-5">
+                <img src="img/atta.png" width="300" height="450"><br>
+                <img src="img/atta.png" width="100" height="150" style="margin-right: 25px;">
+                <img src="img/aata2.png" width="100" height="150" style="margin-right: 25px;">
+                <img src="img/atta3.png" width="100" height="150" style="margin-right: 25px;">
+                
+            </div>
+            <div class="col-sm-6">
+                <h5 class="card-title" style="letter-spacing: .06em;"><b>Aashirvaad Whole Wheat Atta</b></h5>
+                <h5 class="card-title" style="color: #009699;">Aashirvaad</h5><br>
+                <h5 class="card-title" style="font-size: 18px;"><b><i class="fa fa-inr" style="margin-right: 5px;"></i>378.00
+                    <del><span style="color: red; font-size: 14px; text-decoration: line-through;"><i class="fa fa-inr" style="margin-right: 5px; text-decoration: line-through;"></i>400.00</span></del></b></h5><br>
+                    <p class="card-title">You save: <span style="color: #009900; margin-right: 15px;"><b><i class="fa fa-inr" style="margin-right: 5px;"></i>75.00</b></span><b><span class="card-title" style="color: black;">Inclusive of all taxes</span></b></p><br>
+                    <h5 class="card-title" style="color: #009900;"><b>In stock</b></h5><br>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star fa-2x"></span>
+                    <span style="font-size: 14px;">4.0 / 5</span><br><br>
+                    <h5 class="card-title">Available in:</h5><br>
+                    <div class="inputfield btnn">
+                        <div class="row">
+                            <div class="col-lg-3">10kg</div>
+                            <div class="col-lg-3">Rs 378</div>
+                            <div class="col-lg-3">MRP: Rs 490</div>
+                            <div class="col-lg-3">23% off</div>
+                        </div>
+                    </div><br><br>
+                    <div class="inputfield btnn">
+                        <div class="row">
+                            <div class="col-lg-3">5kg</div>
+                            <div class="col-lg-3">Rs 240</div>
+                            <div class="col-lg-3">MRP: Rs 270</div>
+                            <div class="col-lg-3">11% off</div>
+                        </div>
+                    </div><br><br>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="inputfield btnn">
+                                <div>ADD TO CART</div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="inputfield btnn">
+                                <div>BUY NOW</div>
+                            </div>
+                        </div> 
+                    </div>   
+            </div>
+            <div class="col-sm-1"></div>
+        </div><br>
+        <h5 class="card-title"><b>Product Details</b></h5>
+        <p class="card-text" style="font-size: 12px;">Navel oranges are very sugary and juicy and considered to be the world's finest orange for fresh consumption because they are very sweet, naturally juice, seedless and peels and segments very easily. It has a variety of phytochemicals containing flavanoids hesperetin, beta-carotene and carotenoids alpha etc. It is wealthy in Vitamin C, A and Folate and includes small amounts of Vitamin E & B complex vitamins too. Product image shown is for representation purpose only, the actually product may vary based on season, produce & availability. Click here for delicious fruit recipes - https://www.bigbasket.com/flavors/collections/228/fresh-fruits/</p><br>
+        <h5 class="card-title"><b>Benefits</b></h5>
+        <p class="card-text" style="font-size: 12px;">It is rich in Antioxidants which protects the skin from free radicals and also protects against some cancers by suppressing cancer cell proliferation. It is good for asthma patients and orange juice added in the face packs give a new life to the skin by removing the dead cells.</p><br>
+        <h5 class="card-title"><b>How to Use</b></h5>
+        <p class="card-text" style="font-size: 12px;">The peeled, orange segments can be added to the daily fruit bowl, and its juice is a refreshing drink.</p><br>
+        <h5 class="card-title"><b>Product Information</b></h5>
+        <table id="customers">
+  <tr>
+    <td>Brand</td>
+    <td>Aashirvaad</td>
+  </tr>
+  <tr>
+    <td>Manufacturer</td>
+    <td>ITC Limited</td>
+  </tr>
+  <tr>
+    <td>Manufacturer Email</td>
+    <td>FranciscoChang@gmail.com</td>
+  </tr>
+  <tr>
+    <td>Manufacturer Address</td>
+    <td>87, Park Street, A.J.C Bose Road, Mullick Bazar, Park Street area, Kolkata, West Bengal 700016</td>
+  </tr>
+  <tr>
+    <td>Manufacturer contact number</td>
+    <td>123456789</td>
+  </tr>
+  <tr>
+    <td>Country of origin</td>
+    <td>India</td>
+  </tr>
+  <tr>
+    <td>Ingredient type</td>
+    <td><img src="img/veg.png" width="30" height="30"></td>
+    
+  </tr>
+</table><br>
+<div class="row">
+    <div class="col-sm-5">
+        <div class="card mb-3" style=" padding: 32px; height: 250px; padding-top: 14px; background-color: white;">
+            <h5 class="card-title" style="color: #009699;"><b>PRODUCT RATING</b></h5>
+            <div class="row">
+                <div class="col-sm-7">
+                <div class="row" style="margin-left: 25px;">
+                <span class="fa fa-star checked  rate"></span>
+                <span class="fa fa-star checked  rate"></span>
+                <span class="fa fa-star checked  rate"></span>
+                <span class="fa fa-star checked  rate"></span>
+                <span class="fa fa-star checked  rate"></span>
+                <span class="rate" style="font-size: 12px;">0 review</span> 
+            </div><br>
+            <div class="row" style="margin-left: 25px;">
+                <span class="fa fa-star checked  rate"></span>
+                <span class="fa fa-star checked  rate"></span>
+                <span class="fa fa-star checked  rate"></span>
+                <span class="fa fa-star checked  rate"></span>
+                <span class="fa fa-star  rate"></span>
+                <span class="rate" style="font-size: 12px;">1 review</span> 
+            </div><br>
+            <div class="row" style="margin-left: 25px;">
+                <span class="fa fa-star checked  rate"></span>
+                <span class="fa fa-star checked  rate"></span>
+                <span class="fa fa-star checked  rate"></span>
+                <span class="fa fa-star  rate"></span>
+                <span class="fa fa-star  rate"></span>
+                <span class="rate" style="font-size: 12px;">0 review</span> 
+            </div><br>
+            <div class="row" style="margin-left: 25px;">
+                <span class="fa fa-star checked  rate"></span>
+                <span class="fa fa-star checked  rate"></span>
+                <span class="fa fa-star  rate"></span>
+                <span class="fa fa-star  rate"></span>
+                <span class="fa fa-star  rate"></span>
+                <span class="rate" style="font-size: 12px;">0 review</span> 
+            </div><br>
+             <div class="row" style="margin-left: 25px;">
+                <span class="fa fa-star checked  rate"></span>
+                <span class="fa fa-star  rate"></span>
+                <span class="fa fa-star  rate"></span>
+                <span class="fa fa-star  rate"></span>
+                <span class="fa fa-star  rate"></span>
+                <span class="rate" style="font-size: 12px;">0 review</span> 
+            </div><br>
+            </div>
+            <div class="col-sm-5">
+                <br><br><br><div class="row">
+                    <span class="fa fa-star checked fa-2x rate" style="font-size: 24px;"></span>
+                    <span class="rate" style="font-size: 24px;">4.0 / 5</span> 
+                </div><br>
+                <span class="rate" style="font-size: 16px;">1 Rating 1 Review</span>
+            </div>  
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-5">
+        <div class="card mb-3" style=" padding: 14px; height: 250px; padding-top: 14px; background-color: #f2f2f2;">
+            <h5 class="card-title" style="color: orange;"><span class="fa fa-star rate"></span>4.0</h5><br>
+            <h5 class="card-title" style="font-size: 14px">I use this product very fewquently. The quality of atta is very good.</h5>
+            <div class="row">
+                <div style="color: orange; font-size: 12px;" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">Verified Customer</div>
+                <div style="color: orange; font-size: 12px;" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">10 days ago</div>
+            </div><br><br><br>
+            <div class="inputfield btnn">
+                <div>WRITE YOUR  REVIEW</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-2"></div>
+</div>
+</div>
+    
+
+    <!-- Footer Section Begin -->
+    <footer class="footer spad mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <div class="footer__about__logo">
+                            <a href="./index.html"><img src="img/logo.png" alt="" height="90" width="90"></a>
+                        </div>
+                        <div class="footer__about__brand">
+                            <p>PUTATOE TECHNOLOGIES PVT. LTD.</p>
+                        </div>
+                        <div class="row footer__about__address mt-4">
+                            <div class="col-md-3">
+                                <p class="font-weight-bold">ADDRESS:</p>
+                            </div>
+                            <div class="col-md-9 pl-3">
+                                <p>233 Harahawa Phatak,</p>
+                                <p>Near SBI Bank, Gorakhpur,</p>
+                                <p>Uttar Pradesh - 273001</p>
+                            </div>
+                        </div>
+                        <div class="input-group footer__about__contact mt-4">
+                            <a href="#" class="btn"><i class="fa fa-envelope"></i> Email</a>
+                            <a href="#" class="btn"><i class="fa fa-phone"></i> Contact</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 offset-lg-1">
+                    <div class="footer__widget">
+                        <h6>Useful Links</h6>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="footer__widget">
+                        <h6>Join Our Newsletter Now</h6>
+                        <p>Get E-mail updates about our latest shop and special offers.</p>
+                        <form action="#">
+                            <input type="text" placeholder="Enter your mail">
+                            <button type="submit" class="footer__subscribe__btn">Subscribe</button>
+                        </form>
+                        <div class="footer__widget__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/controllers/main.js"></script>
+
+    <script>
+        function myModal(nam) {
+            $('#productInfo').modal('show');
+
+            document.getElementById('save_info').onclick = function () {
+                var val = document.getElementById('product_info').value;
+                console.log(val);
+
+                document.getElementById(nam).value = val;
+                $('#productInfo').modal('hide');
+            }
+        }
+    </script>
+    <script>
+        var elmnt = document.getElementById("carousal");
+var childrenCount = elmnt.childElementCount;
+var childWidth = document.getElementById("child").clientWidth;
+
+function nextScroll(){
+    const n = window.innerWidth / childWidth;
+    if(elmnt.scrollLeft < childWidth){
+        document.getElementById('prevButton').className = "prevButton hide"
+    } else {
+        document.getElementById('prevButton').className = "prevButton"
+    }
+    if(elmnt.scrollLeft > (childrenCount-n+1)*childWidth){
+        document.getElementById('nextButton').className = "nextButton hide"
+    } else {
+        document.getElementById('nextButton').className = "nextButton"
+    }
+}
+
+function nextButtonHandler(){
+    elmnt.scrollLeft += childWidth;
+}
+
+function prevButtonHandler(){
+    elmnt.scrollLeft -= childWidth;
+}
+    </script>
+
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-firestore.js"></script>
+
+    <!-- For sweetalert -->
+    <script src="https://cdn.rawgit.com/t4t5/sweetalert/32bd141c/dist/sweetalert.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+
+</body>
+
+</html>

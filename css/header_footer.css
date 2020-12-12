@@ -1,0 +1,609 @@
+@charset "utf-8";
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    outline: none;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+/* Preloder */
+
+#preloder {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+    background: #000;
+}
+
+.loader {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -13px;
+    margin-left: -13px;
+    border-radius: 60px;
+    animation: loader 0.8s linear infinite;
+    -webkit-animation: loader 0.8s linear infinite;
+}
+
+@keyframes loader {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        border: 4px solid #f44336;
+        border-left-color: transparent;
+    }
+    50% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+        border: 4px solid #673ab7;
+        border-left-color: transparent;
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+        border: 4px solid #f44336;
+        border-left-color: transparent;
+    }
+}
+
+@-webkit-keyframes loader {
+    0% {
+        -webkit-transform: rotate(0deg);
+        border: 4px solid #f44336;
+        border-left-color: transparent;
+    }
+    50% {
+        -webkit-transform: rotate(180deg);
+        border: 4px solid #673ab7;
+        border-left-color: transparent;
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        border: 4px solid #f44336;
+        border-left-color: transparent;
+    }
+}
+
+
+/* -------- Textarea Scrollbar -------- */
+
+/* width */
+textarea::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+textarea::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+textarea::-webkit-scrollbar-thumb {
+    background: #00838f;
+}
+
+/* Handle on hover */
+textarea::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+::placeholder {
+    color: grey !important;
+}
+
+/* -------- Header and Humberger -------- */
+
+.header,
+.footer {
+    background: #00838f;
+}
+
+input:focus,
+input:active {
+    outline: 0 !important;
+}
+
+textarea:focus,
+textarea:active {
+    outline: 0 !important;
+}
+
+/*---------------------
+  Header
+-----------------------*/
+
+.header__logo {
+    padding: 15px 0;
+}
+
+.header__logo a {
+    display: inline-block;
+}
+.header__social__icons a {
+    font-size: 1em;
+    color: white;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+.header .brand-name {
+    font-size: 25px;
+    padding-right: 10px;
+    color: white;
+}
+
+.header__location__button {
+    border-right: 3.5px solid rgba(0, 0, 0, 0.7);
+}
+
+.header__location__button i {
+    font-size: 20px;
+    padding-left: 5px;
+}
+
+.header__search__field .input-group-text:hover {
+    cursor: pointer;
+}
+
+.header__categories__list a {
+    color: white;
+    font-size: smaller;
+    letter-spacing: 1px;
+    padding-right: 10px;
+    padding-left: 5px;
+    border-right: 1.5px solid white;
+}
+
+.header__user__account {
+    color: white;
+    letter-spacing: 0.7px;
+    font-size: smaller;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-top: 15px;
+
+}
+
+.header__user__account:first-child {
+    width: 135px;
+}
+
+.header__user__account i {
+    font-size: 24px;
+    margin-right: 4px;
+    vertical-align: -2.5px;
+}
+
+.brand-name+img {
+    height: 60px;
+    width: 60px;
+}
+
+.humberger__menu__wrapper {
+    display: none;
+}
+
+.humberger__open {
+    display: none;
+}
+
+@media screen and (max-width: 992px) {
+
+    .header__search__field {
+        display: none;
+    }
+
+    .header__social__user__account {
+        display: none;
+    }
+
+    .brand-name+img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .quick__links__div {
+        display: none;
+    }
+}
+
+.humberger__open {
+    border-color: white !important;
+}
+
+.humberger__open i {
+    color: white;
+}
+
+/* ------ Humberger (Mobile Screen Navigation Bar) ------ */
+.humberger__menu__wrapper {
+    background: #e0f2f1;
+    overflow-x: hidden;
+    box-shadow: 5px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+.humberger__login__profile {
+    background: #00838f;
+    padding: 13px 8px;
+}
+
+.humberger__login__profile img {
+    width: 100%;
+    height: auto;
+}
+
+.humberger_login_link {
+    font-size: 1.5em;
+    letter-spacing: 0.7px;
+    font-style: italic;
+    margin-left: -10px;
+    color: white;
+}
+
+.humberger__nav__links {
+    padding: 35px;
+    line-height: 2;
+}
+
+.humberger__nav__links hr {
+    border: 0.3px solid #00838f;
+}
+
+.humberger__nav__links a {
+    color: #00838f;
+}
+
+/* -------- Footer -------- */
+
+.footer {
+    padding-top: 70px;
+    padding-bottom: 0;
+}
+
+.footer__about {
+    margin-bottom: 30px;
+}
+
+.footer__about ul li {
+    font-size: 16px;
+    color: #FFFFFF;
+    line-height: 36px;
+    list-style: none;
+}
+
+.footer__about__logo {
+    margin-bottom: 15px;
+}
+
+.footer__about__logo a {
+    display: inline-block;
+}
+
+.footer__about__brand p {
+    color: white;
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+.footer__about__address p {
+    color: white;
+    font-size: 0.9em;
+    line-height: 0.6;
+}
+
+.footer__subscribe__btn {
+    border: none;
+    border-left: 2px solid #00838f;
+    text-transform: uppercase;
+    color: #00838f;
+    font-weight: 600;
+    background: white;
+}
+
+.footer__about__contact a {
+    border: 1px solid #00838f;
+    background: white;
+    padding: 5px 15px;
+    margin: 5px;
+    color: #00838f;
+}
+
+.footer__about__contact a:hover {
+    color: #00838f;
+}
+
+.footer__about__contact i {
+    color: #00838f;
+    font-size: 1.1em;
+}
+
+.footer__widget__social a:hover {
+    background: #00838f !important;
+}
+.footer__widget {
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.footer__widget h6 {
+    color: #FFFFFF;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.footer__widget ul {
+    width: 50%;
+    float: left;
+}
+
+.footer__widget ul li {
+    list-style: none;
+}
+
+.footer__widget ul li a {
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 32px;
+}
+
+.footer__widget p {
+    font-size: 14px;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+}
+
+.footer__widget form {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.footer__widget form input {
+    width: 100%;
+    font-size: 16px;
+    padding-left: 20px;
+    color: #1c1c1c;
+    height: 46px;
+    border: 1px solid #ededed;
+}
+
+.footer__widget form input::placeholder {
+    color: #1c1c1c;
+}
+
+.footer__widget form button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0 26px;
+    height: 100%;
+}
+
+.footer__widget .footer__widget__social a {
+    display: inline-block;
+    height: 41px;
+    width: 41px;
+    font-size: 16px;
+    color: #404040;
+    border: 1px solid #ededed;
+    border-radius: 50%;
+    line-height: 38px;
+    text-align: center;
+    background: #ffffff;
+    -webkit-transition: all, 0.3s;
+    -moz-transition: all, 0.3s;
+    -ms-transition: all, 0.3s;
+    -o-transition: all, 0.3s;
+    transition: all, 0.3s;
+    margin-right: 10px;
+}
+
+.footer__widget .footer__widget__social a:last-child {
+    margin-right: 0;
+}
+
+.footer__widget .footer__widget__social a:hover {
+    background: #7fad39;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+/*--------------------------------- Responsive Media Quaries -----------------------------*/
+
+@media only screen and (min-width: 1200px) {
+    .container {
+        max-width: 1170px;
+    }
+}
+
+/* Medium Device = 1200px */
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    
+}
+
+/* Tablet Device = 768px */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    
+    .humberger__open {
+        display: block;
+        font-size: 22px;
+        color: #1c1c1c;
+        height: 35px;
+        width: 35px;
+        line-height: 33px;
+        text-align: center;
+        border: 1px solid #1c1c1c;
+        cursor: pointer;
+        position: absolute;
+        right: 15px;
+        top: 22px;
+    }
+    .header .container {
+        position: relative;
+    }
+    .humberger__menu__wrapper {
+        width: 300px;
+        background: #ffffff;
+        position: fixed;
+        left: -300px;
+        top: 0;
+        height: 100%;
+        overflow-y: auto;
+        z-index: 99;
+        padding: 30px;
+        padding-top: 50px;
+        opacity: 0;
+        display: block;
+        -webkit-transition: all, 0.6s;
+        -moz-transition: all, 0.6s;
+        -ms-transition: all, 0.6s;
+        -o-transition: all, 0.6s;
+        transition: all, 0.6s;
+    }
+    .humberger__menu__wrapper.show__humberger__menu__wrapper {
+        opacity: 1;
+        left: 0;
+    }
+    .humberger__menu__overlay {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        content: "";
+        z-index: 98;
+        visibility: hidden;
+        -webkit-transition: all, 0.6s;
+        -moz-transition: all, 0.6s;
+        -ms-transition: all, 0.6s;
+        -o-transition: all, 0.6s;
+        transition: all, 0.6s;
+    }
+    .humberger__menu__overlay.active {
+        visibility: visible;
+    }
+    .header__top {
+        display: none;
+    }
+    .header__menu {
+        display: none;
+    }
+    .over_hid {
+        overflow: hidden;
+    }
+}
+
+/* Wide Mobile = 480px */
+
+@media only screen and (max-width: 767px) {
+    
+    .humberger__open {
+        display: block;
+        font-size: 22px;
+        color: #1c1c1c;
+        height: 35px;
+        width: 35px;
+        line-height: 33px;
+        text-align: center;
+        border: 1px solid #1c1c1c;
+        cursor: pointer;
+        position: absolute;
+        right: 15px;
+        top: 22px;
+    }
+    .header .container {
+        position: relative;
+    }
+    .humberger__menu__wrapper {
+        width: 300px;
+        background: #ffffff;
+        position: fixed;
+        left: -300px;
+        top: 0;
+        height: 100%;
+        overflow-y: auto;
+        z-index: 99;
+        padding: 30px;
+        padding-top: 50px;
+        opacity: 0;
+        display: block;
+        -webkit-transition: all, 0.6s;
+        -moz-transition: all, 0.6s;
+        -ms-transition: all, 0.6s;
+        -o-transition: all, 0.6s;
+        transition: all, 0.6s;
+    }
+    .humberger__menu__wrapper.show__humberger__menu__wrapper {
+        opacity: 1;
+        left: 0;
+    }
+    
+    .humberger__menu__overlay {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        content: "";
+        z-index: 98;
+        visibility: hidden;
+        -webkit-transition: all, 0.6s;
+        -moz-transition: all, 0.6s;
+        -ms-transition: all, 0.6s;
+        -o-transition: all, 0.6s;
+        transition: all, 0.6s;
+    }
+    .humberger__menu__overlay.active {
+        visibility: visible;
+    }
+    .header__top {
+        display: none;
+    }
+    .header__menu {
+        display: none;
+    }
+    
+    .over_hid {
+        overflow: hidden;
+    }
+}
+
+/* Small Device = 320px */
+
+@media only screen and (max-width: 479px) {
+    
+}
+
+
+/*---------------------
+  Quantity Input Field
+-----------------------*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

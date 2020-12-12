@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Putattoe Template">
+    <meta name="keywords" content="Putattoe, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Putatoe | Products</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+    <link rel="stylesheet" href="css/header_footer.css" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="css/products.css" type="text/css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/t4t5/sweetalert/32bd141c/dist/sweetalert.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+</head>
+
+<body onload="showCartBasket(); productsPage();">
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Humberger Begin -->
+    <div class="humberger__menu__overlay"></div>
+    <div class="humberger__menu__wrapper p-0">
+
+        <!-- Profile and Login Signup -->
+        <div class="humberger__login__profile">
+            <div class="row">
+                <div class="col-4">
+                    <img src="img/logo.png" class="rounded-circle" alt="Putatoe_Logo" />
+                </div>
+                <div class="col-8 pt-3">
+                    <a href="login.html" class="humberger_login_link">Login or Signup</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Lists -->
+        <div class="humberger__nav__links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Category</a></li>
+                <li><a href="#">Today Deals</a></li>
+                <hr>
+                <div id="humberger__services"></div>
+                <hr>
+                <li><a href="#">Your Orders</a></li>
+                <li><a href="#">Buy Again</a></li>
+                <li><a href="#">Your Wishlist</a></li>
+                <li><a href="#">Your Account</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Customer Service</a></li>
+                <li><a href="#">Log Out</a></li>
+            </ul>
+        </div>
+        
+
+    </div>
+    <!-- Humberger End -->
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container-fluid pb-1">
+            <div class="row top">
+                <!-- Brand Name and Logo -->
+                <div class="col-lg-3">
+                    <div class="header__logo">
+                        <a href="./index.html">
+                            <span class="pl-lg-3 brand-name"><b>PUTATOE</b></span>
+                            <img src="img/logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Search Field and Categories -->
+                <div class="col-lg-4 header__search__field">
+
+                    <!-- Search Field -->
+                    <div class="input-group form-lg pt-lg-4">
+                        <div class="input-group-prepend bg-light header__location__button">
+                            <button class="btn rounded-0" type="button">Location <i
+                                    class="fa fa-map-marker"></i></button>
+                        </div>
+                        <input class="form-control border-0" id="search-1" name="MobSearchBar" type="text"
+                            placeholder="Search Products" aria-label="Search">
+                        <div class="input-group-append">
+                            <span class="input-group-text bg-white border-0" id="mob-search-icon">
+                            <i class="fa fa-search" aria-hidden="true"></i></span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-2 pt-lg-4 header__social__user__account">
+                    <div class="dropdown" id="my_cart_basket">
+                        <button class="btn"><i class="fa fa-shopping-cart fa-2x"></i><b>MY BASKET</b></button>
+                        <div class="dropdown-content" id="dropdown-content">
+                            <div id="cart_items">
+                              <div style="margin-left: -20px;" id="emptycart">
+                                <img src="img/emptycart.png" height="300" width="400">  
+                              </div>
+                            </div>
+                            <button class="btn btn-lg" id="totprice"></button>
+                            <a href="cart.html" id="update_btn"><button class="btn btn-lg" >Update Cart</button></a>
+                            <a href="payment.html" id="pay_btn"><button class="btn btn-lg">Place Order and proceed to pay</button></a>  
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-1 pt-lg-4 header__social__user__account">
+                    <button class="btn" style="font-weight: 600; background: white;"><a href="login.html" style="color: #00838f;">Login</a></button>
+                </div>
+
+                <!-- Social Links, User, Cart Option -->
+                <div class="col-lg-2 pt-lg-4 header__social__user__account">
+
+                    <!-- Social Links -->
+                    <div class="header__social__icons float-right pr-4">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="humberger__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+     <!--Popular products--->
+    <div class="popular_products">
+        <!--<h2>POPULAR PRODUCTS</h2>--->
+        <div class="popular_products-carousel wow fadeInDown animated" data-wow-delay="0.2s" data-flickity='{ "autoPlay": true, "prevNextButtons": false, "wrapAround": true }'>
+            <div class="single-item">
+                <div class="img" style="background-image: url('img/prod5.jpg');"></div>
+                <div class="info">
+                    <h3>Fresho Oranges</h3>
+                    <h4>Rs 650.00</h4>
+                    <button class="btn btn-lg">ADD TO CART</button>
+                </div>
+            </div>  
+            <div class="single-item">
+                <div class="img" style="background-image: url('img/prod5.jpg');"></div>
+                <div class="info">
+                    <h3>Fresho Oranges</h3>
+                    <h4>Rs 650.00</h4>
+                    <button class="btn btn-lg">ADD TO CART</button>
+                </div>
+            </div>  
+            <div class="single-item">
+                <div class="img" style="background-image: url('img/prod5.jpg');"></div>
+                <div class="info">
+                    <h3>Fresho Oranges</h3>
+                    <h4>Rs 650.00</h4>
+                    <button class="btn btn-lg">ADD TO CART</button>
+                </div>
+            </div>  
+            <div class="single-item">
+                <div class="img" style="background-image: url('img/prod5.jpg');"></div>
+                <div class="info">
+                    <h3>Fresho Oranges</h3>
+                    <h4>Rs 650.00</h4>
+                    <button class="btn btn-lg">ADD TO CART</button>
+                </div>
+            </div>  
+            <div class="single-item">
+                <div class="img" style="background-image: url('img/prod5.jpg');"></div>
+                <div class="info">
+                    <h3>Fresho Oranges</h3>
+                    <h4>Rs 650.00</h4>
+                    <button class="btn btn-lg">ADD TO CART</button>
+                </div>
+            </div>  
+            <div class="single-item">
+                <div class="img" style="background-image: url('img/prod5.jpg');"></div>
+                <div class="info">
+                    <h3>Fresho Oranges</h3>
+                    <h4>Rs 650.00</h4>
+                    <button class="btn btn-lg">ADD TO CART</button>
+                </div>
+            </div>  
+            <div class="single-item">
+                <div class="img" style="background-image: url('img/prod5.jpg');"></div>
+                <div class="info">
+                    <h3>Fresho Oranges</h3>
+                    <h4>Rs 650.00</h4>
+                    <button class="btn btn-lg">ADD TO CART</button>
+                </div>
+            </div>  
+        </div>
+    </div>
+    <!--- popular products end--->
+
+    <div class="container-fluid" style="margin-top: 70px;">
+        <div class="row">
+            <div class="col-lg-2">
+                <div class="d-none d-lg-block">
+                    <!--- Categories start-->
+                    <div class="card">
+                        <div class="filter_head_section">
+                            <h3 class="filter_head">CATEGORY</h3>
+                        </div>
+                        <div class="filter_fields">
+                            <ul>
+                                <li style="background-color: #D6EFF1;"><a href="#">Foodgrains</a></li>
+                                <li style="background-color: #40B1BD;"><a href="#">Dals and Pulses</a></li>
+                                <li style="background-color: #D6EFF1;"><a href="#">Cereals and millets</a></li>
+                                <li style="background-color: #40B1BD;"><a href="#">Wheat and Millets</a></li>
+                            </ul>   
+                        </div> 
+                    </div>
+                    <!--- Categories end-->
+                    <!--- Brands start-->
+                    <div class="card">
+                        <div class="filter_head_section">
+                            <h3 class="filter_head">BRANDS</h3>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="input-group-text" placeholder="Search for brands" style="font-size: 14px; background-color: #fff; width: 79.3%;">
+                            <div class="input-group-append mb-0">
+                                <span class="input-group-text" style="background-color: #D6EFF1;"><i class="fa fa-search"></i></span>
+                            </div>
+                        </div>
+                        <div class="filter_fields" style="overflow-y: scroll; overflow-x: hidden; background-color: #D6EFF1; padding: 7px; margin-top: -17px; height: 180px;">
+                            <div class="row brand">
+                                <input type="checkbox">
+                                <label>Good Diet</label> 
+                            </div>
+                            <div class="row brand">
+                                <input type="checkbox">
+                                <label>Good Diet</label> 
+                            </div>
+                            <div class="row brand">
+                                <input type="checkbox">
+                                <label>Good Diet</label> 
+                            </div>
+                            <div class="row brand">
+                                <input type="checkbox">
+                                <label>Good Diet</label> 
+                            </div>
+                            <div class="row brand">
+                                <input type="checkbox">
+                                <label>Good Diet</label> 
+                            </div>
+                            <div class="row brand">
+                                <input type="checkbox">
+                                <label>Good Diet</label> 
+                            </div>
+                            <div class="row brand">
+                                <input type="checkbox">
+                                <label>Good Diet</label> 
+                            </div>   
+                        </div> 
+                    </div>
+                    <!--- Brands end-->
+                </div>
+            </div>
+            <div class="col-lg-10">
+                <div class="row" id="product_display">
+                    <!-- <div class="col-lg-4">
+                        <div class="card product_card">
+                            <div class="row">
+                                <div class="col-lg-5 product_image">
+                                    <img src="img/atta.png" height="203" width="150">
+                                </div>
+                                <div class="col-lg-7 product_details">
+                                    <h6>bb Royal</h6>
+                                    <h6>Aashirvaad Whole Wheat Atta</h6>
+                                    <div class="product_quantity">
+                                        <select name="quantity">
+                                            <option>Select quantity</option>
+                                            <option>1kg - Rs56</option>
+                                            <option>1kg - Rs56</option>
+                                            <option>1kg - Rs56</option>
+                                        </select> 
+                                    </div>
+                                    <h6>MRP : Rs 120.00</h6>
+                                    <div class="row cart_quantity">
+                                        <input class="cart-quantity-input sign" type="button" onclick="decrementValue()" value="-">
+                                        <input class="cart-quantity-input text" type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="number">
+                                        <input class="cart-quantity-input sign" type="button" onclick="incrementValue()" value="+">
+                                    </div>
+                                    <div class="product_cart_button">
+                                        <button class="btn btn-lg" onclick="addToCart()"><b>ADD TO CART</b></button>
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!-- Footer Section Begin -->
+    <footer class="footer spad mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <div class="footer__about__logo">
+                            <a href="./index.html"><img src="img/logo.png" alt="" height="90" width="90"></a>
+                        </div>
+                        <div class="footer__about__brand">
+                            <p>PUTATOE TECHNOLOGIES PVT. LTD.</p>
+                        </div>
+                        <div class="row footer__about__address mt-4">
+                            <div class="col-md-3">
+                                <p class="font-weight-bold">ADDRESS:</p>
+                            </div>
+                            <div class="col-md-9 pl-3">
+                                <p>233 Harahawa Phatak,</p>
+                                <p>Near SBI Bank, Gorakhpur,</p>
+                                <p>Uttar Pradesh - 273001</p>
+                            </div>
+                        </div>
+                        <div class="input-group footer__about__contact mt-4">
+                            <a href="#" class="btn"><i class="fa fa-envelope"></i> Email</a>
+                            <a href="#" class="btn"><i class="fa fa-phone"></i> Contact</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 offset-lg-1">
+                    <div class="footer__widget">
+                        <h6>Useful Links</h6>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="footer__widget">
+                        <h6>Join Our Newsletter Now</h6>
+                        <p>Get E-mail updates about our latest shop and special offers.</p>
+                        <form action="#">
+                            <input type="text" placeholder="Enter your mail">
+                            <button type="submit" class="footer__subscribe__btn">Subscribe</button>
+                        </form>
+                        <div class="footer__widget__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js" defer></script>
+    <script src="js/bootstrap.min.js" defer></script>
+    <script src="js/jquery.nice-select.min.js" defer></script>
+    <script src="js/jquery-ui.min.js" defer></script>
+    <script src="js/jquery.slicknav.js" defer></script>
+    <script src="js/mixitup.min.js" defer></script>
+    <script src="js/owl.carousel.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/controllers/product.js" defer></script>
+    <script src="js/controllers/mybasket.js" defer></script>
+
+    <script src="js/custom.js" defer></script>
+    <script src="js/vendor/jquery-1.11.2.min.js" defer></script>
+    <script src="js/vendor/bootstrap.min.js" defer></script>
+
+    <script>
+        function myModal(nam) {
+            $('#productInfo').modal('show');
+
+            document.getElementById('save_info').onclick = function () {
+                var val = document.getElementById('product_info').value;
+                console.log(val);
+
+                document.getElementById(nam).value = val;
+                $('#productInfo').modal('hide');
+            }
+        }
+    </script>
+
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-firestore.js"></script>
+
+    <!-- For sweetalert -->
+    <script src="https://cdn.rawgit.com/t4t5/sweetalert/32bd141c/dist/sweetalert.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <!-- For carousel -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/easytimer@1.1.1/src/easytimer.min.js"></script>
+
+</body>
+</html>

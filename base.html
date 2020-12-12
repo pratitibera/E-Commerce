@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Putattoe Template">
+    <meta name="keywords" content="Putattoe, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Putatoe | Base</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/header_footer.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/t4t5/sweetalert/32bd141c/dist/sweetalert.css">
+</head>
+
+<body>
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Humberger Begin -->
+    <div class="humberger__menu__overlay"></div>
+    <div class="humberger__menu__wrapper p-0">
+
+        <!-- Profile and Login Signup -->
+        <div class="humberger__login__profile">
+            <div class="row">
+                <div class="col-4">
+                    <img src="img/logo.png" class="rounded-circle" alt="Putatoe_Logo" />
+                </div>
+                <div class="col-8 pt-3">
+                    <a href="login.html" class="humberger_login_link">Login or Signup</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Lists -->
+        <div class="humberger__nav__links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Category</a></li>
+                <li><a href="#">Today Deals</a></li>
+                <hr>
+                <li><a href="#">Your Orders</a></li>
+                <li><a href="#">Buy Again</a></li>
+                <li><a href="#">Your Wishlist</a></li>
+                <li><a href="#">Your Account</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Customer Service</a></li>
+                <li><a href="#">Log Out</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <!-- Humberger End -->
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container-fluid">
+            <div class="row top">
+                <!-- Brand Name and Logo -->
+                <div class="col-lg-3">
+                    <div class="header__logo">
+                        <a href="./index.html">
+                            <span class="pl-lg-3 brand-name"><b>PUTATOE</b></span>
+                            <img src="img/logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Search Field and Categories -->
+                <div class="col-lg-6 header__search__field">
+
+                    <!-- Search Field -->
+                    <div class="input-group form-lg pt-lg-3">
+                        <div class="input-group-prepend bg-light header__location__button">
+                            <button class="btn rounded-0" type="button">Select Location <i
+                                    class="fa fa-map-marker"></i></button>
+                        </div>
+                        <input class="form-control border-0" id="search-1" name="MobSearchBar" type="text"
+                            placeholder="Search Products" aria-label="Search">
+                        <div class="input-group-append">
+                            <span class="input-group-text bg-white border-0" id="mob-search-icon">
+                                <i class="fa fa-search" aria-hidden="true"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Categories -->
+                    <div class="container pt-1 header__categories__list">
+                        <a href="#">HealthCare</a>
+                        <a href="#">Grocery</a>
+                        <a href="#">Daily Needs</a>
+                        <a href="#">Vegetables</a>
+                    </div>
+                </div>
+
+                <!-- Social Links, User, Cart Option -->
+                <div class="col-lg-3 pt-lg-3 header__social__user__account">
+
+                    <!-- Social Links -->
+                    <div class="header__social__icons float-right pr-4">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                    </div>
+
+                    <!-- User Icon -->
+                    <div class="pt-4">
+                        <a href="#" class="header__user__account"><i class="fa fa-user-circle" aria-hidden="true"></i>
+                            Nature's Bazzar</a>
+
+                        <a href="#" class="header__user__account ml-3"><i class="fa fa-cart-plus"
+                                aria-hidden="true"></i> Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="humberger__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer spad mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <div class="footer__about__logo">
+                            <a href="./index.html"><img src="img/logo.png" alt="" height="90" width="90"></a>
+                        </div>
+                        <div class="footer__about__brand">
+                            <p>PUTATOE TECHNOLOGIES PVT. LTD.</p>
+                        </div>
+                        <div class="row footer__about__address mt-4">
+                            <div class="col-md-3">
+                                <p class="font-weight-bold">ADDRESS:</p>
+                            </div>
+                            <div class="col-md-9 pl-3">
+                                <p>233 Harahawa Phatak,</p>
+                                <p>Near SBI Bank, Gorakhpur,</p>
+                                <p>Uttar Pradesh - 273001</p>
+                            </div>
+                        </div>
+                        <div class="input-group footer__about__contact mt-4">
+                            <a href="#" class="btn"><i class="fa fa-envelope"></i> Email</a>
+                            <a href="#" class="btn"><i class="fa fa-phone"></i> Contact</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 offset-lg-1">
+                    <div class="footer__widget">
+                        <h6>Useful Links</h6>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="footer__widget">
+                        <h6>Join Our Newsletter Now</h6>
+                        <p>Get E-mail updates about our latest shop and special offers.</p>
+                        <form action="#">
+                            <input type="text" placeholder="Enter your mail">
+                            <button type="submit" class="footer__subscribe__btn">Subscribe</button>
+                        </form>
+                        <div class="footer__widget__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/controllers/index.js"></script>
+
+    <script>
+        function myModal(nam) {
+            $('#productInfo').modal('show');
+
+            document.getElementById('save_info').onclick = function () {
+                var val = document.getElementById('product_info').value;
+                console.log(val);
+
+                document.getElementById(nam).value = val;
+                $('#productInfo').modal('hide');
+            }
+        }
+    </script>
+
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-firestore.js"></script>
+
+    <!-- For sweetalert -->
+    <script src="https://cdn.rawgit.com/t4t5/sweetalert/32bd141c/dist/sweetalert.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+
+</body>
+
+</html>

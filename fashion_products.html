@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Putattoe Template">
+    <meta name="keywords" content="Putattoe, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Putatoe | Fashion</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <!-- Author - Rishi Soni -->
+    <link rel="stylesheet" href="css/header_footer.css" type="text/css">
+    <link rel="stylesheet" href="css/filter-colors.css" type="text/css">
+    <link rel="stylesheet" href="css/fashion.css" type="text/css">
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        /* Filter */
+        .fashion_filter_box {
+            padding: 30px 15px;
+            background: #e0f2f1;
+        }
+
+        .filter_heading {
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        hr.filter_break {
+            border: 0.5px solid #00838f;
+            margin: 30px 0;
+        }
+
+        label:hover {
+            cursor: pointer;
+        }
+
+        .filter_button {
+            background: #00838f !important;
+            color: white !important;
+            letter-spacing: 1.2px;
+        }
+
+        .filter_button:hover {
+            color: white !important;
+            background: #006064 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Humberger Begin -->
+    <div class="humberger__menu__overlay"></div>
+    <div class="humberger__menu__wrapper p-0">
+
+        <!-- Profile and Login Signup -->
+        <div class="humberger__login__profile">
+            <div class="row">
+                <div class="col-4">
+                    <img src="img/logo.png" class="rounded-circle" alt="Putatoe_Logo" />
+                </div>
+                <div class="col-8 pt-3">
+                    <a href="login.html" class="humberger_login_link">Login or Signup</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Lists -->
+        <div class="humberger__nav__links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Category</a></li>
+                <li><a href="#">Today Deals</a></li>
+                <hr>
+                <li><a href="#">Your Orders</a></li>
+                <li><a href="#">Buy Again</a></li>
+                <li><a href="#">Your Wishlist</a></li>
+                <li><a href="#">Your Account</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Customer Service</a></li>
+                <li><a href="#">Log Out</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <!-- Humberger End -->
+
+    <!-- Header Section Begin -->
+    <header class="header" id="go-to-top">
+        <div class="container-fluid">
+            <div class="row top">
+                <!-- Brand Name and Logo -->
+                <div class="col-lg-3">
+                    <div class="header__logo">
+                        <a href="./index.html">
+                            <span class="pl-lg-3 brand-name"><b>PUTATOE</b></span>
+                            <img src="img/logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Search Field and Categories -->
+                <div class="col-lg-6 header__search__field">
+
+                    <!-- Search Field -->
+                    <div class="input-group form-lg pt-lg-3">
+                        <div class="input-group-prepend bg-light header__location__button">
+                            <button class="btn rounded-0" type="button">Select Location <i
+                                    class="fa fa-map-marker"></i></button>
+                        </div>
+                        <input class="form-control border-0" id="search-1" name="MobSearchBar" type="text"
+                            placeholder="Search Products" aria-label="Search">
+                        <div class="input-group-append">
+                            <span class="input-group-text bg-white border-0" id="mob-search-icon">
+                                <i class="fa fa-search" aria-hidden="true"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Categories -->
+                    <div class="container pt-1 header__categories__list">
+                        <a href="#">HealthCare</a>
+                        <a href="#">Grocery</a>
+                        <a href="#">Daily Needs</a>
+                        <a href="#">Vegetables</a>
+                    </div>
+                </div>
+
+                <!-- Social Links, User, Cart Option -->
+                <div class="col-lg-3 pt-lg-3 header__social__user__account">
+
+                    <!-- Social Links -->
+                    <div class="header__social__icons float-right pr-4">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                    </div>
+
+                    <!-- User Icon -->
+                    <div class="pt-4">
+                        <a href="#" class="header__user__account"><i class="fa fa-user-circle" aria-hidden="true"></i>
+                            Nature's Bazzar</a>
+
+                        <a href="#" class="header__user__account ml-3"><i class="fa fa-cart-plus"
+                                aria-hidden="true"></i> Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="humberger__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Fashion Product Start -->
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+
+                <!-- Filter Start -->
+                <div class="col-lg-3 col-md-4 fashion_filter_box">
+
+                    <!-- Categories Filter -->
+                    <h5 class="filter_heading">categories</h5>
+                    <div id="categories_box" class="pl-lg-4 pl-3">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="men">
+                            <label class="custom-control-label" for="men">Men</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="women">
+                            <label class="custom-control-label" for="women">Women</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="t-shirt">
+                            <label class="custom-control-label" for="t-shirt">T-shirt</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="footwear">
+                            <label class="custom-control-label" for="footwear">Footwear</label>
+                        </div>
+                    </div>
+
+                    <!-- Categories Filter End -->
+
+                    <hr class="filter_break" />
+
+                    <!-- Price Filter Start -->
+                    <h6 class="filter_heading">Price (in Rs.)</h6>
+                    <div id="price_box" class="row">
+                        <div class="col-6">
+                            <input type="number" class="form-control" min="100" max="1,00,000" id="price-min-control"
+                                placeholder="Min Price" value="100" name="minPrice">
+                        </div>
+                        <div class="col-6">
+                            <input type="number" class="form-control" min="100" max="1,00,000" id="price-max-control"
+                                placeholder="Max Price" value="100000" name="maxPrice">
+                        </div>
+                    </div>
+                    <!-- Price Filter End -->
+
+                    <hr class="filter_break" />
+
+                    <!-- Color Filter Start -->
+                    <h6 class="filter_heading">Color</h6>
+                    <section id="color-filter" filter="color">
+                        <div class="btn-group btn-group-toggle btn-color-group d-block mt-n2 ml-n4"
+                            data-toggle="buttons" id="colors_box">
+                            <label for="color-1" class="btn rounded-circle black p-3 my-2 mx-1">
+                                <input id="color-1" name="color" onchange="changeColor(this)" type="checkbox"
+                                    color="black" />
+                            </label>
+                            <label for="color-2" class="btn rounded-circle white p-3 my-2 mx-1">
+                                <input id="color-2" name="color" onchange="changeColor(this)" type="checkbox"
+                                    color="white" />
+                            </label>
+                            <label for="color-3" class="btn rounded-circle pink p-3 my-2 mx-1">
+                                <input id="color-3" name="color" onchange="changeColor(this)" type="checkbox"
+                                    color="pink" />
+                            </label>
+                            <label for="color-4" class="btn rounded-circle amber p-3 my-2 mx-1">
+                                <input id="color-4" name="color" onchange="changeColor(this)" type="checkbox"
+                                    color="amber" />
+                            </label>
+                            <label for="color-5" class="btn rounded-circle green p-3 my-2 mx-1">
+                                <input id="color-5" name="color" onchange="changeColor(this)" type="checkbox"
+                                    color="green" />
+                            </label>
+                            <label for="color-6" class="btn rounded-circle orange p-3 my-2 mx-1">
+                                <input id="color-6" name="color" onchange="changeColor(this)" type="checkbox"
+                                    color="orange" />
+                            </label>
+                            <label for="color-7" class="btn rounded-circle navy p-3 my-2 mx-1">
+                                <input id="color-7" name="color" onchange="changeColor(this)" type="checkbox"
+                                    color="navy" />
+                            </label>
+                        </div>
+                    </section>
+                    <!-- Color Filter End -->
+
+                    <hr class="filter_break" />
+
+                    <!-- Disount Filter Start -->
+                    <h6 class="filter_heading">Discount</h6>
+                    <div id="discount_box" class="pl-lg-4 pl-3">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" name="discount" class="custom-control-input" id="filter-discount-1">
+                            <label class="custom-control-label" for="filter-discount-1">5% Off or more</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" name="discount" class="custom-control-input" id="filter-discount-2">
+                            <label class="custom-control-label" for="filter-discount-2">10% Off or more</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" name="discount" class="custom-control-input" id="filter-discount-3">
+                            <label class="custom-control-label" for="filter-discount-3">20% Off or more</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" name="discount" class="custom-control-input" id="filter-discount-4">
+                            <label class="custom-control-label" for="filter-discount-4">30% Off or more</label>
+                        </div>
+                    </div>
+                    <!-- Disount Filter End -->
+
+                    <hr class="filter_break" />
+
+                    <!-- Rating Filter Start -->
+                    <h6 class="filter_heading">Avg. Customer Review</h6>
+                    <div id="rating_box" class="pl-3">
+                        <div class="form-inline">
+                            <label for="customer-rating-4" class="">
+                                <input id="customer-rating-4" class="filter-option" name="ratings" type="checkbox"
+                                    rating="4" />
+                                <ul class="rating waves-light mb-0 ml-2">
+                                    <li><i class="fa fa-star fa-sm text-warning "></i></li>
+                                    <li><i class="fa fa-star fa-sm text-warning"></i></li>
+                                    <li><i class="fa fa-star fa-sm text-warning"></i></li>
+                                    <li><i class="fa fa-star fa-sm text-warning"></i></li>
+                                    <li><i class="fa fa-star fa-sm not-checked"></i></li>
+                                    <li>
+                                        <p class="small text-uppercase card-link-secondary px-2"> & Up</p>
+                                    </li>
+                                </ul>
+                            </label>
+                        </div><br>
+                        <div class="form-inline">
+                            <label for="customer-rating-3" class="z-depth-0 py-0">
+                                <input id="customer-rating-3" class="filter-option" name="ratings" type="checkbox"
+                                    rating="3" />
+                                <ul class="rating waves-light mb-0 ml-2">
+                                    <li><i class="fa fa-star fa-sm text-warning"></i></li>
+                                    <li><i class="fa fa-star fa-sm text-warning"></i></li>
+                                    <li><i class="fa fa-star fa-sm text-warning"></i></li>
+                                    <li><i class="fa fa-star fa-sm not-checked"></i></li>
+                                    <li><i class="fa fa-star fa-sm not-checked"></i></li>
+                                    <li>
+                                        <p class="small text-uppercase card-link-secondary px-2">& Up</p>
+                                    </li>
+                                </ul>
+                            </label>
+                        </div><br>
+                        <div class="form-inline">
+                            <label for="customer-rating-2" class="z-depth-0 py-0">
+                                <input id="customer-rating-2" class="filter-option" name="ratings" type="checkbox"
+                                    rating="2" />
+                                <ul class="rating waves-light mb-0 ml-2">
+                                    <li><i class="fa fa-star fa-sm text-warning"></i></li>
+                                    <li><i class="fa fa-star fa-sm text-warning"></i></li>
+                                    <li><i class="fa fa-star fa-sm not-checked"></i></li>
+                                    <li><i class="fa fa-star fa-sm not-checked"></i></li>
+                                    <li><i class="fa fa-star fa-sm not-checked"></i></li>
+                                    <li>
+                                        <p class="small text-uppercase card-link-secondary px-2">& Up</p>
+                                    </li>
+                                </ul>
+                            </label>
+                        </div><br>
+                        <div class="form-inline">
+                            <label for="customer-rating-1" class="z-depth-0 py-0">
+                                <input id="customer-rating-1" class="filter-option" name="ratings" type="checkbox"
+                                    rating="1" />
+                                <ul class="rating waves-light mb-0 ml-2">
+                                    <li><i class="fa fa-star fa-sm text-warning "></i></li>
+                                    <li><i class="fa fa-star fa-sm not-checked"></i></li>
+                                    <li><i class="fa fa-star fa-sm not-checked"></i></li>
+                                    <li><i class="fa fa-star fa-sm not-checked"></i></li>
+                                    <li><i class="fa fa-star fa-sm not-checked"></i></li>
+                                    <li>
+                                        <p class="small text-uppercase card-link-secondary px-2">& Up</p>
+                                    </li>
+                                </ul>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- Rating Filter End -->
+
+                    <hr class="filter_break" />
+
+                    <!-- Filter Submit Button Start -->
+                    <div class="form-group">
+                        <button type="button" class="btn btn-block filter_button" onclick="applyFilter()">FILTER</button>
+                    </div>
+                    <!-- Filter Submit Button End -->
+
+                </div>
+                <!-- Filter End -->
+
+                <!-- Productlist Start -->
+                <div class="col-lg-9 col-md-8 p-md-5 p-lg-5 p-4">
+                    <div class="row mb-5">
+                        <div class="dropdown text-md-left text-center float-md-left">
+                            <form class="form-inline">
+                                <label for="SortBy" class="mr-3 mb-2">Sort By:</label>
+                                <select name="SortBy" id="SortBy" class="pl-3">
+                                    <option value="none" hidden selected disabled>Sort By</option>
+                                    <option value="priceAscending">Price: Low to High</option>
+                                    <option value="priceDescending">Price: High to Low</option>
+                                    <option value="popular">Popular</option>
+                                    <option value="bestselling">Best Selling</option>
+                                </select>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Products acc. to the FILTER done by user -->
+                    <div class="row" id="products-filter-outer-row"></div>
+
+                    <!-- Initial Products when the page loads -->
+                    <div class="row" id="products-outer-row">
+                        <div class="col-lg-4 col-md-6 col-6 mb-3 product-col-div" id="pid-300"
+                            onclick="productDetails(this.id)">
+                            <div class="card h-100 border-0 product-grid">
+                                <div class="card-img-top product-images">
+                                    <img src="https://images-na.ssl-images-amazon.com/images/I/716Nke9RuSL._UL1500_.jpg"
+                                        imgid="img-1876" class="mx-auto pic-1" alt="pic-1" />
+                                    <img src="https://images-na.ssl-images-amazon.com/images/I/71%2Bt3zrZ-PL._UL1500_.jpg"
+                                        imgid="img-1877" class="mx-auto pic-2" alt="pic-2" />
+                                </div>
+                                <div class="card-body px-xl-4 px-md-4 px-sm-3">
+                                    <h5 class="card-title">
+                                        <span class="font-weight-bold text-dark text-uppercase small">
+                                            Tommy Hilfiger Men's Slim Fit T-Shirt
+                                        </span>
+                                    </h5>
+                                    <div class="price-outer-div">
+                                        <div class="final-price" id="final-price">
+                                            <i class="fa fa-inr"></i>
+                                            1117.00
+                                        </div>
+                                        <div class="price" id="price">
+                                            <s class="price">
+                                                <i class="fa fa-inr"></i>
+                                                2499.00
+                                            </s>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-6 mb-3 product-col-div" id="pid-300"
+                            onclick="productDetails(this.id)">
+                            <div class="card h-100 border-0 product-grid">
+                                <div class="card-img-top product-images">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/putatoeapp/o/Tshirt%2F1231598176569511?alt=media&token=1671c4fe-63ce-47ec-be69-ff861da04f53"
+                                        imgid="img-1876" class="mx-auto pic-1" alt="pic-1" />
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/putatoeapp/o/Tshirt%2F1231598176852273?alt=media&token=4128dc25-ce60-483a-b50d-7ead1de83963"
+                                        imgid="img-1877" class="mx-auto pic-2" alt="pic-2" />
+                                </div>
+                                <div class="card-body px-xl-4 py-xl-3 px-md-4 py-md-3 p-sm-3 p-2">
+                                    <h5 class="card-title">
+                                        <span class="font-weight-bold text-dark text-uppercase small">
+                                            Tommy Hilfiger Men's Slim Fit T-Shirt
+                                        </span>
+                                    </h5>
+                                    <div class="price-outer-div">
+                                        <div class="final-price" id="final-price">
+                                            <i class="fa fa-inr"></i>
+                                            1117.00
+                                        </div>
+                                        <div class="price" id="price">
+                                            <s class="price">
+                                                <i class="fa fa-inr"></i>
+                                                2499.00
+                                            </s>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-6 mb-3 product-col-div" id="pid-300"
+                            onclick="productDetails(this.id)">
+                            <div class="card h-100 border-0 product-grid">
+                                <div class="card-img-top product-images">
+                                    <img src="https://images-na.ssl-images-amazon.com/images/I/716Nke9RuSL._UL1500_.jpg"
+                                        imgid="img-1876" class="mx-auto pic-1" alt="pic-1" />
+                                    <img src="https://images-na.ssl-images-amazon.com/images/I/71%2Bt3zrZ-PL._UL1500_.jpg"
+                                        imgid="img-1877" class="mx-auto pic-2" alt="pic-2" />
+                                </div>
+                                <div class="card-body px-xl-4 px-md-4 px-sm-3">
+                                    <h5 class="card-title">
+                                        <span class="font-weight-bold text-dark text-uppercase small">
+                                            Tommy Hilfiger Men's Slim Fit T-Shirt
+                                        </span>
+                                    </h5>
+                                    <div class="price-outer-div">
+                                        <div class="final-price" id="final-price">
+                                            <i class="fa fa-inr"></i>
+                                            1117.00
+                                        </div>
+                                        <div class="price" id="price">
+                                            <s class="price">
+                                                <i class="fa fa-inr"></i>
+                                                2499.00
+                                            </s>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-6 mb-3 product-col-div" id="pid-300"
+                            onclick="productDetails(this.id)">
+                            <div class="card h-100 border-0 product-grid">
+                                <div class="card-img-top product-images">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/putatoeapp/o/Tshirt%2F1231598176569511?alt=media&token=1671c4fe-63ce-47ec-be69-ff861da04f53"
+                                        imgid="img-1876" class="mx-auto pic-1" alt="pic-1" />
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/putatoeapp/o/Tshirt%2F1231598176852273?alt=media&token=4128dc25-ce60-483a-b50d-7ead1de83963"
+                                        imgid="img-1877" class="mx-auto pic-2" alt="pic-2" />
+                                </div>
+                                <div class="card-body px-xl-4 py-xl-3 px-md-4 py-md-3 p-sm-3 p-2">
+                                    <h5 class="card-title">
+                                        <span class="font-weight-bold text-dark text-uppercase small">
+                                            Tommy Hilfiger Men's Slim Fit T-Shirt
+                                        </span>
+                                    </h5>
+                                    <div class="price-outer-div">
+                                        <div class="final-price" id="final-price">
+                                            <i class="fa fa-inr"></i>
+                                            1117.00
+                                        </div>
+                                        <div class="price" id="price">
+                                            <s class="price">
+                                                <i class="fa fa-inr"></i>
+                                                2499.00
+                                            </s>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="filter_loader">
+                        <div class="row d-flex justify-content-center">
+                            <div class="spinner-grow" role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                            <div class="spinner-grow" role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                            <div class="spinner-grow" role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                            <div class="spinner-grow" role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row sorting mb-5 mt-5">
+                        <div class="col-12">
+                            <a href="#go-to-top" class="btn btn-light">
+                                <i class="fa fa-arrow-up mr-2"></i>Back to top</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Productlist End -->
+
+            </div>
+        </div>
+    </main>
+    <!-- Fashion Product End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <div class="footer__about__logo">
+                            <a href="./index.html"><img src="img/logo.png" alt="" height="90" width="90"></a>
+                        </div>
+                        <div class="footer__about__brand">
+                            <p>PUTATOE TECHNOLOGIES PVT. LTD.</p>
+                        </div>
+                        <div class="row footer__about__address mt-4">
+                            <div class="col-md-3">
+                                <p class="font-weight-bold">ADDRESS:</p>
+                            </div>
+                            <div class="col-md-9 pl-3">
+                                <p>233 Harahawa Phatak,</p>
+                                <p>Near SBI Bank, Gorakhpur,</p>
+                                <p>Uttar Pradesh - 273001</p>
+                            </div>
+                        </div>
+                        <div class="input-group footer__about__contact mt-4">
+                            <a href="#" class="btn"><i class="fa fa-envelope"></i> Email</a>
+                            <a href="#" class="btn"><i class="fa fa-phone"></i> Contact</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 offset-lg-1">
+                    <div class="footer__widget">
+                        <h6>Useful Links</h6>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="footer__widget">
+                        <h6>Join Our Newsletter Now</h6>
+                        <p>Get E-mail updates about our latest shop and special offers.</p>
+                        <form action="#">
+                            <input type="text" placeholder="Enter your mail">
+                            <button type="submit" class="footer__subscribe__btn">Subscribe</button>
+                        </form>
+                        <div class="footer__widget__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/controllers/index.js"></script>
+    <script src="js/controllers//fashion_products.js"></script>
+
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-firestore.js"></script>
+
+
+</body>
+
+</html>

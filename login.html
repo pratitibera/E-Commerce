@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Putattoe Template">
+    <meta name="keywords" content="Putattoe, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Putatoe | Login</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/header_footer.css" type="text/css">
+
+    <!-- Sweetalert -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/t4t5/sweetalert/32bd141c/dist/sweetalert.css">
+
+    <!-- Page Styles -->
+    <link rel="stylesheet" href="css/login.css" type="text/css">
+    <style>
+    	body {
+    background: url(img/login_cover.jpg);
+    background-size: cover;
+ }
+    </style>
+</head>
+
+<body>
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container-fluid pb-1">
+            <div class="row top">
+                <!-- Brand Name and Logo -->
+                <div class="col-lg-3">
+                    <div class="header__logo">
+                        <a href="./index.html">
+                            <span class="pl-lg-3 brand-name"><b>PUTATOE</b></span>
+                            <img src="img/logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Search Field and Categories -->
+                <div class="col-lg-6 header__search__field"></div>
+
+                <!-- Social Links, User, Cart Option -->
+                <div class="col-lg-3 pt-lg-4 header__social__user__account">
+
+                    <!-- Social Links -->
+                    <div class="header__social__icons float-right pr-4">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                    </div>
+
+                    <div class=""></div>
+
+                    <!-- User Icon -->
+                    <div class="pt-5">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <div class="container-fluid">
+    	<div class="row">
+    		<div class="col-0 col-sm-1 col-md-2 col-lg-2 col-xl-3"></div>
+    		<div class="col-12 col-sm-10 col-md-8 col-lg-8 col-xl-6"><br>
+    			<!-- login form-->
+    			<div class="box" id="loginbox">
+    				<h2 class="loginhead">Login or Signup</h2><br>
+    				<div class="form-group">
+    					<small class="form-text">Please use +91 before your mobile number</small>
+    					<input class="form-control" id="Mobnumber" rows="1" maxlength="13" placeholder="+91 | Mobile number"></input>
+    					<small class="form-text text-muted">We'll never share your number with anyone else.</small>
+    				</div>
+    				<button class="btn" value="0" onclick="shownumber(this.value)">CONTINUE</button>
+    				<h1 class="or">OR</h1>
+    				<button class="btn google_btn"><span class="fa fa-google"></span> Continue with Google</button>
+    				<h1 class="or">OR</h1>
+    				<button class="btn fb_btn" onclick="fbLogin()" id="fbLink"><span class="fa fa-facebook"></span> Continue with Facebook</button>
+    				<h1 class="or">OR</h1>
+    				<button class="btn" value="1" onclick="shownumber(this.value)">SIGN UP FOR BUSINESS</button>
+    			</div>  
+    			<!-- login form ends-->
+    		</div>
+    		<div class="col-0 col-sm-1 col-md-2 col-lg-2 col-xl-3"></div>
+    	</div>
+
+    	<div class="row">
+    		<div class="col-0 col-sm-2 col-md-3 col-lg-3 col-xl-4"></div>
+    		<div class="col-12 col-sm-8 col-md-6 col-lg-6 col-xl-4"><br>
+    			<!---OTP form-->
+                <div class="otpbox" id="verify_otp">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/putatoeapp/o/Tshirt%2F1231597243022977?alt=media&token=596948b4-5f83-4064-9a94-d041b1fcf7dc" height="150" width="150">
+                    <div id="veri"><h3 class="otphead">VERIFY WITH OTP</h3></div>
+                    <div id="invalid"><h3 class="otphead" style="color: red">INVALID OTP</h3></div>
+                    <div id="sent"><p style="font-size: 14px;">Sent to <span id="entered_mob_no"></span></p></div>
+                    <div id="re_enter"><p style="font-size: 14px; color: red">Please re-enter OTP</p></div>
+                    <form onsubmit="return false">
+                        <div class="form-group fetch_results">
+                            <input  class="digit text-center " type="text" id="otp_val1" maxLength="1" size="1" pattern="[0-9]{1}" onfocus="this.value=''" >
+                            <input  class="digit text-center" type="text" id="otp_val2" maxLength="1" size="1" pattern="[0-9]{1}" onfocus="this.value=''" >
+                            <input class="digit text-center" type="text" id="otp_val3" maxLength="1" size="1" pattern="[0-9]{1}" onfocus="this.value=''" >
+                            <input  class="digit text-center" type="text" id="otp_val4" maxLength="1" size="1" pattern="[0-9]{1}" onfocus="this.value=''">
+                        </div>
+                    </form>
+                    <p id="timer_para">Resend OTP in <strong>00:<span id="timer"></span></strong></p>
+                    <button class="btn" style="background-color: #027e8b; color: white; width: 80%;" id="verify">VERIFY</button><br><br>
+                    <p class="log_in_trbl">Having trouble in logging in? <a href="#" class="trbl"><strong>Get Help</strong></a></p>
+                </div>
+                <!-- OTP form ends-->
+    		</div>
+    		<div class="col-0 col-sm-2 col-md-3 col-lg-3 col-xl-4"></div>
+    	</div>
+    </div>
+    
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/controllers/login.js"></script>
+
+    <script>
+        function myModal(nam) {
+            $('#productInfo').modal('show');
+
+            document.getElementById('save_info').onclick = function () {
+                var val = document.getElementById('product_info').value;
+                console.log(val);
+
+                document.getElementById(nam).value = val;
+                $('#productInfo').modal('hide');
+            }
+        }
+    </script>
+
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-firestore.js"></script>
+
+    <!-- For sweetalert -->
+    <script src="https://cdn.rawgit.com/t4t5/sweetalert/32bd141c/dist/sweetalert.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</body>
+</html>

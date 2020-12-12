@@ -1,0 +1,24 @@
+<html>
+   <head>
+      <title>Show Payment Page</title>
+   </head>
+   <body onload="makePayment()">
+      <center>
+         <h1 style="color:  #00838f;">Please do not refresh this page...</h1>
+      </center>
+      <form method="post" name="paytm" id="paytm">
+         <table border="1" style="display: none;">
+            <tbody>
+               <input type="hidden" name="mid" id="mid">
+               <input type="hidden" name="orderId" id="orderId">
+               <input type="hidden" name="txnToken" id="txnToken">
+            </tbody>
+         </table>
+         <button class="btn btn-lg" onclick="document.paytm.submit();" style="display: none;" id="paybtn">SUBMIT</button>
+         <script type="text/javascript"> 
+               //document.paytm.submit(); 
+         </script>
+      </form>
+      <script src="js/controllers/payment.js"></script>
+   </body>
+</html>

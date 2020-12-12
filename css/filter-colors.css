@@ -1,0 +1,351 @@
+@charset "utf-8";
+
+#color-filter label {
+    border: 0.3px solid grey;
+}
+
+#color-filter .black {
+    background-color: #000;
+}
+#color-filter .blue {
+    background-color: #00f;
+}
+#color-filter .white {
+    background-color: white;
+}
+#color-filter .pink {
+    background-color: pink;
+}
+#color-filter .yellow {
+    background-color: #ff0;
+}
+#color-filter .orange {
+    background-color: orange;
+}
+#color-filter .red {
+    background-color: red;
+}
+#color-filter .green {
+    background-color: green;
+}
+#color-filter .amaranth {
+    background-color: #F19CBB;
+}
+#color-filter .amber {
+    background-color: #FFBF00;
+}
+#color-filter .amethyst {
+    background-color: #9966cc;
+}
+#color-filter .apricot {
+    background-color: #fbceb1;
+}
+#color-filter .aquamarine {
+    background-color: aquamarine;
+}
+#color-filter .azure {
+    background-color: azure;
+}
+#color-filter .babyblue {
+    background-color: #89CFF0;
+}
+#color-filter .beige {
+    background-color: beige;
+}
+#color-filter .brickred {
+    background-color: #cb4154;
+}
+#color-filter .bluegreen {
+    background-color: #0d98ba;
+}
+#color-filter .blueviolet {
+    background-color: blueviolet;
+}
+#color-filter .blush {
+    background-color: #DE5D83;
+}
+#color-filter .bronze {
+    background-color: #CD7F32;
+}
+#color-filter .brown {
+    background-color: brown;
+}
+#color-filter .burgundy {
+    background-color: #800020;
+}
+#color-filter .byzantium {
+    background-color: #702963;
+}
+#color-filter .carmine {
+    background-color: #960018;
+}
+#color-filter .cerise {
+    background-color: #DE3163;
+}
+#color-filter .cerulean {
+    background-color: #0040FF;
+}
+#color-filter .champagne {
+    background-color: #F7E7CE;
+}
+#color-filter .chartreusegreen {
+    background-color: #7FFF00;
+}
+#color-filter .chocolate {
+    background-color: chocolate;
+}
+#color-filter .cobaltblue {
+    background-color: #0047ab;
+}
+#color-filter .coffee {
+    background-color: #6f4e37;
+}
+#color-filter .copper {
+    background-color: #b87333;
+}
+#color-filter .coral {
+    background-color: coral;
+}
+#color-filter .crimson {
+    background-color: crimson;
+}
+#color-filter .cyan {
+    background-color: cyan;
+}
+#color-filter .desertsand {
+    background-color: #EDC9AF;
+}
+#color-filter .skyblue { 
+    background-color: skyblue; 
+}
+#color-filter .electricblue { 
+    background-color: #7df9ff; 
+}
+#color-filter .emerald {
+    background-color: #50C878;
+}
+#color-filter .erin {
+    background-color: #00FF40;
+}
+#color-filter .gold {
+    background-color: gold;
+}
+#color-filter .gray {
+    background-color: gray;
+}
+#color-filter .harlequin {
+    background-color: #3fff00;
+}
+#color-filter .indigo {
+    background-color: indigo;
+}
+#color-filter .ivory {
+    background-color: ivory;
+}
+#color-filter .jade {
+    background-color: #00a86b;
+}
+#color-filter .junglegreen {
+    background-color: #29ab87;
+}
+#color-filter .lavender {
+    background-color: #E6E6FA;
+}
+#color-filter .lemon {
+    background-color: #fff44f;
+}
+#color-filter .lilac {
+    background-color: #c8a2c8;
+}
+#color-filter .lime {
+    background-color: lime;
+}
+#color-filter .magenta {
+    background-color: magenta;
+}
+#color-filter .magentarose {
+    background-color: #FF00AF;
+}
+#color-filter .maroon {
+    background-color: maroon;
+}
+#color-filter .mauve {
+    background-color: #e0b0ff;
+}
+#color-filter .navyblue {
+    background-color: #003366;
+}
+#color-filter .ochre {
+    background-color: #cc7722;
+}
+#color-filter .olive {
+    background-color: olive;
+}
+#color-filter .orangered {
+    background-color: orangered;
+}
+#color-filter .orchid {
+    background-color: orchid;
+}
+#color-filter .peach {
+    background-color: peachpuff;
+}
+#color-filter .pear {
+    background-color: #d1e231;
+}
+#color-filter .plum {
+    background-color: plum;
+}
+#color-filter .prussianblue {
+    background-color: #003153;
+}
+#color-filter .puce {
+    background-color: #cc8899;
+}
+#color-filter .purple {
+    background-color: purple;
+}
+#color-filter .raspberry {
+    background-color: #e30b5d;
+}
+#color-filter .redviolet {
+    background-color: #922b3e;
+}
+#color-filter .rose {
+    background-color: #FF007F;
+}
+#color-filter .ruby {
+    background-color: #E0115F;
+}
+#color-filter .salmon {
+    background-color: salmon;
+}
+#color-filter .sangria {
+    background-color: #92000a;
+}
+#color-filter .sapphire {
+    background-color: #0F52BA;
+}
+#color-filter .scarlet {
+    background-color: #FF2400;
+}
+#color-filter .silver {
+    background-color: silver;
+}
+#color-filter .slategray {
+    background-color: slategray;
+}
+#color-filter .springbud {
+    background-color: #c9dc87;
+}
+#color-filter .springgreen {
+    background-color: #00ff7f;
+}
+#color-filter .tan {
+    background-color: tan;
+}
+#color-filter .taupe {
+    background-color: #483C32;
+}
+#color-filter .teal {
+    background-color: teal;
+}
+#color-filter .turquoise {
+    background-color: #40E0D0;
+}
+#color-filter .ultramarine {
+    background-color: #3f00ff;
+}
+#color-filter .viridian {
+    background-color: #40826D;
+}
+#color-filter .icegrey {
+    background-color: #dae4de;
+}
+#color-filter .maroonyellow {
+    background-color: #800000;
+}
+#color-filter .wine {
+    background-color: #b11226;
+}
+#color-filter .pine {
+    background-color: #01796f;
+}
+#color-filter .darkforestgreen {
+    background-color: #228B22;
+}
+#color-filter .deeppurple {
+    background-color: #3a243b;
+}
+#color-filter .boldred {
+    background-color: #D82010;
+}
+#color-filter .shield {
+    background-color: #991b1e;
+}
+#color-filter .lightgrey {
+    background-color: lightgrey;
+}
+#color-filter .antra {
+    background-color: #FF5733;
+}
+#color-filter .mustard {
+    background-color: #FDD451;
+}
+#color-filter .royalblue {
+    background-color: #4169e1;
+}
+#color-filter .steelblue {
+    background-color: #4682b4;
+}
+#color-filter .olivegreen {
+    background-color: #bab86c;
+}
+#color-filter .blackbeige {
+    background-color: #d9b382;
+}
+#color-filter .blackorange {
+    background-color: #ff8c00;
+}
+#color-filter .indigobeige {
+    background-color: #4b0082;
+}
+#color-filter .navyindigo {
+    background-color: #4b0082;
+}
+#color-filter .rednavy {
+    background-color: #8b0000;
+}
+#color-filter .jetblack {
+    background-color: #0A0A0A;
+}
+#color-filter .neon {
+    background-color: #FFFF00;
+}
+#color-filter .pastelblue {
+    background-color: #80cee1;
+}
+#color-filter .iceblue {
+    background-color: #A5F2F3;
+}
+#color-filter .melange {
+    background-color: #afafaf;
+}
+#color-filter .navy {
+    background-color: #000080;
+}
+#color-filter .cement {
+    background-color: #917567;
+}
+#color-filter .stone {
+    background-color: #888c8d;
+}
+#color-filter .nightsky {
+    background-color: #7b8993;
+}
+#color-filter .darknavy {
+    background-color: #003366;
+}
+#color-filter .washedindigo {
+    background-color: #98afd3;
+}
