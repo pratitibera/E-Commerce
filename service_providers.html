@@ -1,514 +1,403 @@
 <!DOCTYPE html>
 <html lang="zxx">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Putattoe Template">
-    <meta name="keywords" content="Putattoe, unica, creative, html">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Putatoe | Service Provider</title>
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-    <!-- Css Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
-    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
-    <link rel="stylesheet" href="css/header_footer.css" type="text/css">
-    <link rel="stylesheet" href="css/main.css" type="text/css">
-
-    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/t4t5/sweetalert/32bd141c/dist/sweetalert.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-</head>
-
-<body onload="showCartBasket(); SellersPage();">
-    <div id="preloder">
-        <div class="loader"></div>
-    </div>
-
-    <!-- Humberger Begin -->
-    <div class="humberger__menu__overlay"></div>
-    <div class="humberger__menu__wrapper p-0">
-
-        <!-- Profile and Login Signup -->
-        <div class="humberger__login__profile">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="description" content="Putattoe Template">
+      <meta name="keywords" content="Putattoe, unica, creative, html">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Putatoe | Service Provider</title>
+      <!-- Google Font -->
+      <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <!-- Css Styles -->
+      <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+      <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+      <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+      <!-- Sweetalert css --->
+      <link rel="stylesheet" href="https://cdn.rawgit.com/t4t5/sweetalert/32bd141c/dist/sweetalert.css">
+      <!---- Animation css ----- >
+         <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+         <!--- Image slider Flickity--->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+      <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+      <!-- Base css --->
+      <link rel="stylesheet" href="css/header_footer.css" type="text/css">
+      <!-- Particular page css --->
+      <link rel="stylesheet" href="css/main.css" type="text/css">
+   </head>
+   <body onload="showCartBasket(); SellersPage(); navbar(); mainServicesPage();">
+      <div id="preloder">
+         <div class="loader"></div>
+      </div>
+      <!-- Humberger Begin -->
+      <div class="humberger__menu__overlay"></div>
+      <div class="humberger__menu__wrapper p-0">
+         <!-- Profile and Login Signup -->
+         <div class="humberger__login__profile">
             <div class="row">
-                <div class="col-4">
-                    <img src="img/logo.png" class="rounded-circle" alt="Putatoe_Logo" />
-                </div>
-                <div class="col-8 pt-3">
-                    <a href="login.html" class="humberger_login_link">Login or Signup</a>
-                </div>
+               <div class="col-4">
+                  <img src="img/logo.png" class="rounded-circle" alt="Putatoe_Logo" />
+               </div>
+               <div class="col-4"></div>
+               <div class="col-4 pt-3" id="login_btn">
+                  <a href="login.html" style="color: #00838f;"><button class="btn" style="font-weight: 600; background: white;">Login</button></a>
+               </div>
+               <div class="col-4 pt-3" id="logout_btn">
+                  <a href="login.html" style="color: #00838f;"><button class="btn" style="font-weight: 600; background: white;">Logout</button></a>
+               </div>
             </div>
-        </div>
-
-        <!-- Mobile Navigation Lists -->
-        <div class="humberger__nav__links">
+         </div>
+         <!-- Mobile Navigation Lists -->
+         <div class="humberger__nav__links">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Category</a></li>
-                <li><a href="#">Today Deals</a></li>
-                <hr>
-                <div id="humberger__services"></div>
-                <hr>
-                <li><a href="#">Your Orders</a></li>
-                <li><a href="#">Buy Again</a></li>
-                <li><a href="#">Your Wishlist</a></li>
-                <li><a href="#">Your Account</a></li>
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">Customer Service</a></li>
-                <li><a href="#">Log Out</a></li>
+               <li><a href="#">Home</a></li>
+               <li><a href="#">Category</a></li>
+               <li><a href="#">Today Deals</a></li>
+               <hr>
+               <div id="humberger__services"></div>
+               <hr>
+               <li><a href="#">Your Orders</a></li>
+               <li><a href="#">Buy Again</a></li>
+               <li><a href="#">Your Wishlist</a></li>
+               <li><a href="#">Your Account</a></li>
+               <li><a href="#">Settings</a></li>
+               <li><a href="#">Customer Service</a></li>
+               <li><a href="#">Log Out</a></li>
             </ul>
-        </div>
-        
-
-    </div>
-    <!-- Humberger End -->
-
-    <!-- Header Section Begin -->
-    <header class="header">
-        <div class="container-fluid pb-1">
+         </div>
+      </div>
+      <!-- Humberger End -->
+      <!-- Header Section Begin -->
+      <header class="header">
+         <div class="container-fluid pb-1">
             <div class="row top">
-                <!-- Brand Name and Logo -->
-                <div class="col-lg-3">
-                    <div class="header__logo">
-                        <a href="./index.html">
-                            <span class="pl-lg-3 brand-name"><b>PUTATOE</b></span>
-                            <img src="img/logo.png" alt="">
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Search Field and Categories -->
-                <div class="col-lg-4 header__search__field">
-
-                    <!-- Search Field -->
-                    <div class="input-group form-lg pt-lg-4">
-                        <div class="input-group-prepend bg-light header__location__button">
-                            <button class="btn rounded-0" type="button">Location <i
-                                    class="fa fa-map-marker"></i></button>
+               <!-- Brand Name and Logo -->
+               <div class="col-lg-3">
+                  <div class="header__logo">
+                     <a href="./index.html">
+                     <span class="pl-lg-3 brand-name"><b>PUTATOE</b></span>
+                     <img src="img/logo.png" alt="">
+                     </a>
+                  </div>
+               </div>
+               <!-- Search Field and Categories -->
+               <div class="col-lg-4 header__search__field">
+                  <!-- Search Field -->
+                  <div class="input-group form-lg pt-lg-4">
+                     <div class="input-group-prepend bg-light header__location__button">
+                        <button class="btn rounded-0" type="button">Location <i
+                           class="fa fa-map-marker"></i></button>
+                     </div>
+                     <input class="form-control border-0" id="search-1" name="MobSearchBar" type="text"
+                        placeholder="Search Products" aria-label="Search">
+                     <div class="input-group-append">
+                        <span class="input-group-text bg-white border-0" id="mob-search-icon">
+                        <i class="fa fa-search" aria-hidden="true"></i></span>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-2 pt-lg-4 header__social__user__account">
+                  <div class="dropdown">
+                     <button class="btn"><i class="fa fa-shopping-cart fa-2x"></i><b>MY BASKET</b></button>
+                     <div class="dropdown-content" id="dropdown-content">
+                        <div id="cart_items">
+                           <div style="margin-left: -20px;" id="emptycart">
+                              <img src="img/emptycart.png" height="300" width="400">  
+                           </div>
                         </div>
-                        <input class="form-control border-0" id="search-1" name="MobSearchBar" type="text"
-                            placeholder="Search Products" aria-label="Search">
-                        <div class="input-group-append">
-                            <span class="input-group-text bg-white border-0" id="mob-search-icon">
-                            <i class="fa fa-search" aria-hidden="true"></i></span>
+                        <button class="btn btn-lg" id="totprice"></button>
+                        <a href="cart.html" id="update_btn"><button class="btn btn-lg" >Update Cart</button></a>
+                        <a href="payment.html" id="pay_btn"><button class="btn btn-lg">Place Order and proceed to pay</button></a>  
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-1 header_buttons">
+                  <br>
+                  <div class="row">
+                     <div class="col-lg-12" id="header_login">
+                        <a href="login.html" style="color: #00838f;"><button class="btn" style="font-weight: 600; background: white;">Login</button></a>
+                     </div>
+                     <div class="col-lg-12" id="header_logout">
+                        <a href="#" style="color: #00838f;"><button class="btn" style="font-weight: 600; background: white;" onclick="logout();">Logout</button></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- Social Links, User, Cart Option -->
+               <div class="col-lg-2 pt-lg-4 header__social__user__account">
+                  <!-- Social Links -->
+                  <div class="header__social__icons float-right pr-4">
+                     <a href="#"><i class="fa fa-facebook"></i></a>
+                     <a href="#"><i class="fa fa-instagram"></i></a>
+                     <a href="#"><i class="fa fa-twitter"></i></a>
+                     <a href="#"><i class="fa fa-linkedin"></i></a>
+                     <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                  </div>
+               </div>
+            </div>
+            <div class="humberger__open">
+               <i class="fa fa-bars"></i>
+            </div>
+         </div>
+      </header>
+      <!-- Header Section End -->
+      <!-- offers carousel-->
+      <div class="carousel" data-flickity='{ "wrapAround": true, "pageDots": false }'>
+         <div class="carousel-item"><img src="img/main_images/7.jpg"></div>
+         <div class="carousel-item"><img src="img/main_images/8.jpg"></div>
+      </div>
+      <!---Carousel ends-->
+      <!--Popular products--->
+      <div class="popular">
+         <div class="row">
+            <div class="col-sm-10">
+               <h2 class="wow fadeInLeft animated" data-wow-delay="0.2s">POPULAR PRODUCTS</h2>
+            </div>
+            <div class="col-sm-2" style="margin-top: 10px;">
+               <a href="#"><button class="btn" style="font-weight: 600; background-color: #00838f; color: white;">VIEW ALL</button></a>
+            </div>
+         </div>
+         <div class="popular-carousel popular_products wow fadeInDown animated" data-wow-delay="0.2s" id="popular_products"></div>
+      </div>
+      <!--- popular products end--->
+      <!--- services--->
+      <div class="container-fluid" style="background-color: #00838f;">
+         <div style="padding: 30px;">
+            <h2 class="services_head wow fadeInDown animated" data-wow-delay="0.2s">SERVICE PROVIDERS</h2>
+            <div class="row wow fadeInLeft animated" id="service_providers" data-wow-delay="0.5s">
+               <!---<div class="col-sm-4 wow fadeInLeft animated" data-wow-delay="0.2s">
+                  <div class="card mb-3 cardb" style="max-width: 480px; box-shadow: 0 1.4rem 8rem rgba(0,0,0,.5); border-radius: .8rem; margin-top: 12px;">
+                    <div class="row no-gutters">
+                      <div class="col-md-6">
+                        <div class="card-body" style="text-align: center;">
+                          <h5 class="card-title"><b>RESTAURANTS</b></h5>
+                          <h6 style="margin: 5px;">Online Order</h6>
+                          <h6 style="margin: 5px;">Online Order</h6>
+                          <h6 style="margin: 5px;">Online Order</h6>
+                  
+                          <div style="margin: 12px;"><a href="restuarants.html"><button type="button" class="btn btn-info">Explore</button></a></div>
                         </div>
+                      </div>
+                      <div class="col-md-6 order-md-last order-first">
+                        <img src="img/services/2.jpg" class="card-img" height="203" width="200" style="object-fit: cover;">
+                      </div>
                     </div>
-
-                </div>
-                <div class="col-lg-2 pt-lg-4 header__social__user__account">
-                    <div class="dropdown">
-                        <button class="btn"><i class="fa fa-shopping-cart fa-2x"></i><b>MY BASKET</b></button>
-                        <div class="dropdown-content" id="dropdown-content">
-                            <div id="cart_items">
-                              <div style="margin-left: -20px;" id="emptycart">
-                                <img src="img/emptycart.png" height="300" width="400">  
-                              </div>
-                            </div>
-                            <button class="btn btn-lg" id="totprice"></button>
-                            <a href="cart.html" id="update_btn"><button class="btn btn-lg" >Update Cart</button></a>
-                            <a href="payment.html" id="pay_btn"><button class="btn btn-lg">Place Order and proceed to pay</button></a>  
+                  </div>
+                  </div>
+                  <div class="col-sm-4 wow fadeInLeft animated" data-wow-delay="0.2s">
+                  <div class="card mb-3 cardb" style="max-width: 480px; box-shadow: 0 1.4rem 8rem rgba(0,0,0,.5); border-radius: .8rem; margin-top: 12px;">
+                    <div class="row no-gutters">
+                      <div class="col-md-6">
+                        <div class="card-body" style="text-align: center;">
+                          <h5 class="card-title"><b>RESTAURANTS</b></h5>
+                          <h6 style="margin: 5px;">Online Order</h6>
+                          <h6 style="margin: 5px;">Online Order</h6>
+                          <h6 style="margin: 5px;">Online Order</h6>
+                  
+                          <div style="margin: 12px;"><a href="restuarants.html"><button type="button" class="btn btn-info">Explore</button></a></div>
                         </div>
+                      </div>
+                      <div class="col-md-6 order-md-last order-first">
+                        <img src="img/services/2.jpg" class="card-img" height="203" width="200" style="object-fit: cover;">
+                      </div>
                     </div>
-                </div>
-                <div class="col-lg-1 pt-lg-4 header__social__user__account">
-                    <button class="btn" style="font-weight: 600; background: white;"><a href="login.html" style="color: #00838f;">Login</a></button>
-                </div>
-
-                <!-- Social Links, User, Cart Option -->
-                <div class="col-lg-2 pt-lg-4 header__social__user__account">
-
-                    <!-- Social Links -->
-                    <div class="header__social__icons float-right pr-4">
+                  </div>
+                  </div>
+                  <div class="col-sm-4 wow fadeInLeft animated" data-wow-delay="0.2s">
+                  <div class="card mb-3 cardb" style="max-width: 480px; box-shadow: 0 1.4rem 8rem rgba(0,0,0,.5); border-radius: .8rem; margin-top: 12px;">
+                    <div class="row no-gutters">
+                      <div class="col-md-6">
+                        <div class="card-body" style="text-align: center;">
+                          <h5 class="card-title"><b>RESTAURANTS</b></h5>
+                          <h6 style="margin: 5px;">Online Order</h6>
+                          <h6 style="margin: 5px;">Online Order</h6>
+                          <h6 style="margin: 5px;">Online Order</h6>
+                  
+                          <div style="margin: 12px;"><a href="restuarants.html"><button type="button" class="btn btn-info">Explore</button></a></div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 order-md-last order-first">
+                        <img src="img/services/2.jpg" class="card-img" height="203" width="200" style="object-fit: cover;">
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="col-sm-4 wow fadeInLeft animated" data-wow-delay="0.2s">
+                  <div class="card mb-3 cardb" style="max-width: 480px; box-shadow: 0 1.4rem 8rem rgba(0,0,0,.5); border-radius: .8rem; margin-top: 12px;">
+                    <div class="row no-gutters">
+                      <div class="col-md-6">
+                        <div class="card-body" style="text-align: center;">
+                          <h5 class="card-title"><b>RESTAURANTS</b></h5>
+                          <h6 style="margin: 5px;">Online Order</h6>
+                          <h6 style="margin: 5px;">Online Order</h6>
+                          <h6 style="margin: 5px;">Online Order</h6>
+                  
+                          <div style="margin: 12px;"><a href="restuarants.html"><button type="button" class="btn btn-info">Explore</button></a></div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 order-md-last order-first">
+                        <img src="img/services/2.jpg" class="card-img" height="203" width="200" style="object-fit: cover;">
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="col-sm-4 wow fadeInLeft animated" data-wow-delay="0.2s">
+                  <div class="card mb-3 cardb" style="max-width: 480px; box-shadow: 0 1.4rem 8rem rgba(0,0,0,.5); border-radius: .8rem; margin-top: 12px;">
+                    <div class="row no-gutters">
+                      <div class="col-md-6">
+                        <div class="card-body" style="text-align: center;">
+                          <h5 class="card-title"><b>RESTAURANTS</b></h5>
+                          <h6 style="margin: 5px;">Online Order</h6>
+                          <h6 style="margin: 5px;">Online Order</h6>
+                          <h6 style="margin: 5px;">Online Order</h6>
+                  
+                          <div style="margin: 12px;"><a href="restuarants.html"><button type="button" class="btn btn-info">Explore</button></a></div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 order-md-last order-first">
+                        <img src="img/services/2.jpg" class="card-img" height="203" width="200" style="object-fit: cover;">
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="col-sm-4 wow fadeInLeft animated" data-wow-delay="0.2s">
+                  <div class="card mb-3 cardb" style="max-width: 480px; box-shadow: 0 1.4rem 8rem rgba(0,0,0,.5); border-radius: .8rem; margin-top: 12px;">
+                    <div class="row no-gutters">
+                      <div class="col-md-6">
+                        <div class="card-body" style="text-align: center;">
+                          <h5 class="card-title"><b>RESTAURANTS</b></h5>
+                          <h6 style="margin: 5px;">Online Order</h6>
+                          <h6 style="margin: 5px;">Online Order</h6>
+                          <h6 style="margin: 5px;">Online Order</h6>
+                  
+                          <div style="margin: 12px;"><a href="restuarants.html"><button type="button" class="btn btn-info">Explore</button></a></div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 order-md-last order-first">
+                        <img src="img/services/2.jpg" class="card-img" height="203" width="200" style="object-fit: cover;">
+                      </div>
+                    </div>
+                  </div>
+                  </div>--->
+            </div>
+         </div>
+      </div>
+      <!--- services ends--->
+      <!--- popular service providers--->
+      <div class="popular">
+         <h2 class="wow fadeInLeft animated" data-wow-delay="0.2s">POPULAR SERVICE PROVIDERS</h2>
+         <div class="popular-carousel popular_sellers wow fadeInDown animated" data-wow-delay="0.2s" id="popular_sellers">
+         </div>
+      </div>
+      <!--- popular service providers--->
+      <!-- Footer Section Begin -->
+      <footer class="footer spad mt-5">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-4 col-md-6 col-sm-6">
+                  <div class="footer__about">
+                     <div class="footer__about__logo">
+                        <a href="./index.html"><img src="img/logo.png" alt="" height="90" width="90"></a>
+                     </div>
+                     <div class="footer__about__brand">
+                        <p>PUTATOE TECHNOLOGIES PVT. LTD.</p>
+                     </div>
+                     <div class="row footer__about__address mt-4">
+                        <div class="col-md-3">
+                           <p class="font-weight-bold">ADDRESS:</p>
+                        </div>
+                        <div class="col-md-9 pl-3">
+                           <p>233 Harahawa Phatak,</p>
+                           <p>Near SBI Bank, Gorakhpur,</p>
+                           <p>Uttar Pradesh - 273001</p>
+                        </div>
+                     </div>
+                     <div class="input-group footer__about__contact mt-4">
+                        <a href="#" class="btn"><i class="fa fa-envelope"></i> Email</a>
+                        <a href="#" class="btn"><i class="fa fa-phone"></i> Contact</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-3 col-md-6 col-sm-6 offset-lg-1">
+                  <div class="footer__widget">
+                     <h6>Useful Links</h6>
+                     <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-12">
+                  <div class="footer__widget">
+                     <h6>Join Our Newsletter Now</h6>
+                     <p>Get E-mail updates about our latest shop and special offers.</p>
+                     <form action="#">
+                        <input type="text" placeholder="Enter your mail">
+                        <button type="submit" class="footer__subscribe__btn">Subscribe</button>
+                     </form>
+                     <div class="footer__widget__social">
                         <a href="#"><i class="fa fa-facebook"></i></a>
                         <a href="#"><i class="fa fa-instagram"></i></a>
                         <a href="#"><i class="fa fa-twitter"></i></a>
                         <a href="#"><i class="fa fa-linkedin"></i></a>
-                        <a href="#"><i class="fa fa-pinterest-p"></i></a>
-                    </div>
-                </div>
+                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                     </div>
+                  </div>
+               </div>
             </div>
-            <div class="humberger__open">
-                <i class="fa fa-bars"></i>
-            </div>
-        </div>
-    </header>
-    <!-- Header Section End -->
-
-    <!-- offers carousel-->
-    <div class="carousel" data-flickity='{ "wrapAround": true }'>
-        <div class="carousel-item"><img src="img/slide1.png"></div>
-        <div class="carousel-item"><img src="img/slide2.png"></div>
-    </div>
-    <!---Carousel ends-->
-
-    <!--Popular products--->
-    <div class="popular">
-        <h2 class="wow fadeInLeft animated" data-wow-delay="0.2s">POPULAR PRODUCTS</h2>
-        <div class="popular-carousel wow fadeInDown animated" data-flickity='{ "autoPlay": true, "prevNextButtons": false, "wrapAround": true }' data-wow-delay="0.2s">
-            <div class="single-item">
-                <div class="img" style="background-image: url('img/prod5.jpg');"></div>
-                <div class="info">
-                    <h3>Fresho Oranges</h3>
-                    <h4>Rs 650.00</h4>
-                    <button class="btn btn-lg">ADD TO CART</button>
-                </div>
-            </div>  
-            <div class="single-item">
-                <div class="img" style="background-image: url('img/prod5.jpg');"></div>
-                <div class="info">
-                    <h3>Fresho Oranges</h3>
-                    <h4>Rs 650.00</h4>
-                    <button class="btn btn-lg">ADD TO CART</button>
-                </div>
-            </div>  
-            <div class="single-item">
-                <div class="img" style="background-image: url('img/prod5.jpg');"></div>
-                <div class="info">
-                    <h3>Fresho Oranges</h3>
-                    <h4>Rs 650.00</h4>
-                    <button class="btn btn-lg">ADD TO CART</button>
-                </div>
-            </div>  
-            <div class="single-item">
-                <div class="img" style="background-image: url('img/prod5.jpg');"></div>
-                <div class="info">
-                    <h3>Fresho Oranges</h3>
-                    <h4>Rs 650.00</h4>
-                    <button class="btn btn-lg">ADD TO CART</button>
-                </div>
-            </div>  
-            <div class="single-item">
-                <div class="img" style="background-image: url('img/prod5.jpg');"></div>
-                <div class="info">
-                    <h3>Fresho Oranges</h3>
-                    <h4>Rs 650.00</h4>
-                    <button class="btn btn-lg">ADD TO CART</button>
-                </div>
-            </div>  
-            <div class="single-item">
-                <div class="img" style="background-image: url('img/prod5.jpg');"></div>
-                <div class="info">
-                    <h3>Fresho Oranges</h3>
-                    <h4>Rs 650.00</h4>
-                    <button class="btn btn-lg">ADD TO CART</button>
-                </div>
-            </div>  
-            <div class="single-item">
-                <div class="img" style="background-image: url('img/prod5.jpg');"></div>
-                <div class="info">
-                    <h3>Fresho Oranges</h3>
-                    <h4>Rs 650.00</h4>
-                    <button class="btn btn-lg">ADD TO CART</button>
-                </div>
-            </div>  
-        </div>
-    </div>
-   
-    <!--- popular products end--->
-
-    <!--- services--->
-    <div class="container-fluid" style="background-color: #00838f;">
-        <div style="padding: 30px;">
-        <h2 class="services_head wow fadeInDown animated" data-wow-delay="0.2s">SERVICES WE PROVIDE</h2>
-        <div class="row wow fadeInLeft animated" id="service_providers" data-wow-delay="0.5s">
-            <!---<div class="col-sm-4 wow fadeInLeft animated" data-wow-delay="0.2s">
-          <div class="card mb-3 cardb" style="max-width: 480px; box-shadow: 0 1.4rem 8rem rgba(0,0,0,.5); border-radius: .8rem; margin-top: 12px;">
-            <div class="row no-gutters">
-              <div class="col-md-6">
-                <div class="card-body" style="text-align: center;">
-                  <h5 class="card-title"><b>RESTAURANTS</b></h5>
-                  <h6 style="margin: 5px;">Online Order</h6>
-                  <h6 style="margin: 5px;">Online Order</h6>
-                  <h6 style="margin: 5px;">Online Order</h6>
-
-                  <div style="margin: 12px;"><a href="restuarants.html"><button type="button" class="btn btn-info">Explore</button></a></div>
-                </div>
-              </div>
-              <div class="col-md-6 order-md-last order-first">
-                <img src="img/services/2.jpg" class="card-img" height="203" width="200" style="object-fit: cover;">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4 wow fadeInLeft animated" data-wow-delay="0.2s">
-          <div class="card mb-3 cardb" style="max-width: 480px; box-shadow: 0 1.4rem 8rem rgba(0,0,0,.5); border-radius: .8rem; margin-top: 12px;">
-            <div class="row no-gutters">
-              <div class="col-md-6">
-                <div class="card-body" style="text-align: center;">
-                  <h5 class="card-title"><b>RESTAURANTS</b></h5>
-                  <h6 style="margin: 5px;">Online Order</h6>
-                  <h6 style="margin: 5px;">Online Order</h6>
-                  <h6 style="margin: 5px;">Online Order</h6>
-
-                  <div style="margin: 12px;"><a href="restuarants.html"><button type="button" class="btn btn-info">Explore</button></a></div>
-                </div>
-              </div>
-              <div class="col-md-6 order-md-last order-first">
-                <img src="img/services/2.jpg" class="card-img" height="203" width="200" style="object-fit: cover;">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4 wow fadeInLeft animated" data-wow-delay="0.2s">
-          <div class="card mb-3 cardb" style="max-width: 480px; box-shadow: 0 1.4rem 8rem rgba(0,0,0,.5); border-radius: .8rem; margin-top: 12px;">
-            <div class="row no-gutters">
-              <div class="col-md-6">
-                <div class="card-body" style="text-align: center;">
-                  <h5 class="card-title"><b>RESTAURANTS</b></h5>
-                  <h6 style="margin: 5px;">Online Order</h6>
-                  <h6 style="margin: 5px;">Online Order</h6>
-                  <h6 style="margin: 5px;">Online Order</h6>
-
-                  <div style="margin: 12px;"><a href="restuarants.html"><button type="button" class="btn btn-info">Explore</button></a></div>
-                </div>
-              </div>
-              <div class="col-md-6 order-md-last order-first">
-                <img src="img/services/2.jpg" class="card-img" height="203" width="200" style="object-fit: cover;">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4 wow fadeInLeft animated" data-wow-delay="0.2s">
-          <div class="card mb-3 cardb" style="max-width: 480px; box-shadow: 0 1.4rem 8rem rgba(0,0,0,.5); border-radius: .8rem; margin-top: 12px;">
-            <div class="row no-gutters">
-              <div class="col-md-6">
-                <div class="card-body" style="text-align: center;">
-                  <h5 class="card-title"><b>RESTAURANTS</b></h5>
-                  <h6 style="margin: 5px;">Online Order</h6>
-                  <h6 style="margin: 5px;">Online Order</h6>
-                  <h6 style="margin: 5px;">Online Order</h6>
-
-                  <div style="margin: 12px;"><a href="restuarants.html"><button type="button" class="btn btn-info">Explore</button></a></div>
-                </div>
-              </div>
-              <div class="col-md-6 order-md-last order-first">
-                <img src="img/services/2.jpg" class="card-img" height="203" width="200" style="object-fit: cover;">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4 wow fadeInLeft animated" data-wow-delay="0.2s">
-          <div class="card mb-3 cardb" style="max-width: 480px; box-shadow: 0 1.4rem 8rem rgba(0,0,0,.5); border-radius: .8rem; margin-top: 12px;">
-            <div class="row no-gutters">
-              <div class="col-md-6">
-                <div class="card-body" style="text-align: center;">
-                  <h5 class="card-title"><b>RESTAURANTS</b></h5>
-                  <h6 style="margin: 5px;">Online Order</h6>
-                  <h6 style="margin: 5px;">Online Order</h6>
-                  <h6 style="margin: 5px;">Online Order</h6>
-
-                  <div style="margin: 12px;"><a href="restuarants.html"><button type="button" class="btn btn-info">Explore</button></a></div>
-                </div>
-              </div>
-              <div class="col-md-6 order-md-last order-first">
-                <img src="img/services/2.jpg" class="card-img" height="203" width="200" style="object-fit: cover;">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4 wow fadeInLeft animated" data-wow-delay="0.2s">
-          <div class="card mb-3 cardb" style="max-width: 480px; box-shadow: 0 1.4rem 8rem rgba(0,0,0,.5); border-radius: .8rem; margin-top: 12px;">
-            <div class="row no-gutters">
-              <div class="col-md-6">
-                <div class="card-body" style="text-align: center;">
-                  <h5 class="card-title"><b>RESTAURANTS</b></h5>
-                  <h6 style="margin: 5px;">Online Order</h6>
-                  <h6 style="margin: 5px;">Online Order</h6>
-                  <h6 style="margin: 5px;">Online Order</h6>
-
-                  <div style="margin: 12px;"><a href="restuarants.html"><button type="button" class="btn btn-info">Explore</button></a></div>
-                </div>
-              </div>
-              <div class="col-md-6 order-md-last order-first">
-                <img src="img/services/2.jpg" class="card-img" height="203" width="200" style="object-fit: cover;">
-              </div>
-            </div>
-          </div>
-        </div>--->
-    </div>
-    </div>
-    </div>
-    <!--- services ends--->
-
-    <!--- popular service providers--->
-    <div class="popular">
-        <h2 class="wow fadeInLeft animated" data-wow-delay="0.2s">POPULAR SERVICE PROVIDERS</h2>
-        <div class="popular-carousel wow fadeInDown animated" data-flickity='{ "autoPlay": true, "prevNextButtons": false, "wrapAround": true }' data-wow-delay="0.2s">
-            <div class="single-item">
-                <div class="img" style="background-image: url('img/prod5.jpg');"></div>
-                <div class="info">
-                    <h3>Fagulal Groceries</h3>
-                    <button class="btn btn-lg">EXPLORE</button>
-                </div>
-            </div> 
-            <div class="single-item">
-                <div class="img" style="background-image: url('img/prod5.jpg');"></div>
-                <div class="info">
-                    <h3>Fagulal Groceries</h3>
-                    <button class="btn btn-lg">EXPLORE</button>
-                </div>
-            </div>  
-            <div class="single-item">
-                <div class="img" style="background-image: url('img/prod5.jpg');"></div>
-                <div class="info">
-                    <h3>Fagulal Groceries</h3>
-                    <button class="btn btn-lg">EXPLORE</button>
-                </div>
-            </div>  
-            <div class="single-item">
-                <div class="img" style="background-image: url('img/prod5.jpg');"></div>
-                <div class="info">
-                    <h3>Fagulal Groceries</h3>
-                    <button class="btn btn-lg">EXPLORE</button>
-                </div>
-            </div>  
-            <div class="single-item">
-                <div class="img" style="background-image: url('img/prod5.jpg');"></div>
-                <div class="info">
-                    <h3>Fagulal Groceries</h3>
-                    <button class="btn btn-lg">EXPLORE</button>
-                </div>
-            </div>  
-            <div class="single-item">
-                <div class="img" style="background-image: url('img/prod5.jpg');"></div>
-                <div class="info">
-                    <h3>Fagulal Groceries</h3>
-                    <button class="btn btn-lg">EXPLORE</button>
-                </div>
-            </div>  
-            <div class="single-item">
-                <div class="img" style="background-image: url('img/prod5.jpg');"></div>
-                <div class="info">
-                    <h3>Fagulal Groceries</h3>
-                    <button class="btn btn-lg">EXPLORE</button>
-                </div>
-            </div>   
-        </div>
-    </div>
-    <!--- popular service providers--->
-
-    <!-- Footer Section Begin -->
-    <footer class="footer spad mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="footer__about">
-                        <div class="footer__about__logo">
-                            <a href="./index.html"><img src="img/logo.png" alt="" height="90" width="90"></a>
-                        </div>
-                        <div class="footer__about__brand">
-                            <p>PUTATOE TECHNOLOGIES PVT. LTD.</p>
-                        </div>
-                        <div class="row footer__about__address mt-4">
-                            <div class="col-md-3">
-                                <p class="font-weight-bold">ADDRESS:</p>
-                            </div>
-                            <div class="col-md-9 pl-3">
-                                <p>233 Harahawa Phatak,</p>
-                                <p>Near SBI Bank, Gorakhpur,</p>
-                                <p>Uttar Pradesh - 273001</p>
-                            </div>
-                        </div>
-                        <div class="input-group footer__about__contact mt-4">
-                            <a href="#" class="btn"><i class="fa fa-envelope"></i> Email</a>
-                            <a href="#" class="btn"><i class="fa fa-phone"></i> Contact</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 offset-lg-1">
-                    <div class="footer__widget">
-                        <h6>Useful Links</h6>
-                        <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12">
-                    <div class="footer__widget">
-                        <h6>Join Our Newsletter Now</h6>
-                        <p>Get E-mail updates about our latest shop and special offers.</p>
-                        <form action="#">
-                            <input type="text" placeholder="Enter your mail">
-                            <button type="submit" class="footer__subscribe__btn">Subscribe</button>
-                        </form>
-                        <div class="footer__widget__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-pinterest"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </footer>
-    <!-- Footer Section End -->
-
-    <!-- Js Plugins -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.nice-select.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/jquery.slicknav.js"></script>
-    <script src="js/mixitup.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/controllers/service_providers.js"></script>
-    <script src="js/controllers/mybasket.js"></script>
-
-    <script src="js/custom.js"></script>
-    <script src="js/vendor/jquery-1.11.2.min.js"></script>
-    <script src="js/vendor/bootstrap.min.js"></script>
-
-    <script>
-        function myModal(nam) {
-            $('#productInfo').modal('show');
-
-            document.getElementById('save_info').onclick = function () {
-                var val = document.getElementById('product_info').value;
-                console.log(val);
-
-                document.getElementById(nam).value = val;
-                $('#productInfo').modal('hide');
-            }
-        }
-    </script>
-
-    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
-
-    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
-
-    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
-    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-analytics.js"></script>
-
-    <!-- Add Firebase products that you want to use -->
-    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-firestore.js"></script>
-
-    <!-- For sweetalert -->
-    <script src="https://cdn.rawgit.com/t4t5/sweetalert/32bd141c/dist/sweetalert.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
-    <!-- For carousel -->
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/easytimer@1.1.1/src/easytimer.min.js"></script>
-
-
-
-</body>
-
+         </div>
+      </footer>
+      <!-- Footer Section End -->
+      <!-- Js Plugins -->
+      <script src="js/jquery-3.3.1.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/jquery.nice-select.min.js"></script>
+      <script src="js/jquery-ui.min.js"></script>
+      <script src="js/jquery.slicknav.js"></script>
+      <script src="js/mixitup.min.js"></script>
+      <script src="js/owl.carousel.min.js"></script>
+      <script src="js/main.js"></script>
+      <script src="js/custom.js"></script>
+      <script src="js/vendor/jquery-1.11.2.min.js"></script>
+      <script src="js/vendor/bootstrap.min.js"></script>
+      <!---For API --->
+      <script src="js/apis/urls.js" defer></script>
+      <!---Page controllers---->
+      <script src="js/controllers/main.js"></script>
+      <script src="js/controllers/mybasket.js"></script>
+      <script src="js/controllers/navbar.js"></script>
+      <script src="js/controllers/service_providers.js"></script>
+      <script>
+         function myModal(nam) {
+             $('#productInfo').modal('show');
+         
+             document.getElementById('save_info').onclick = function () {
+                 var val = document.getElementById('product_info').value;
+                 console.log(val);
+         
+                 document.getElementById(nam).value = val;
+                 $('#productInfo').modal('hide');
+             }
+         }
+      </script>
+      <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+      <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+      <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+      <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+      <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+      <!-- initialising firebase -->
+      <script src="js/controllers/firebase.js"></script>
+      <!-- Add Firebase products that you want to use -->
+      <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-remote-config.js"></script>
+      <!-- For sweetalert -->
+      <script src="https://cdn.rawgit.com/t4t5/sweetalert/32bd141c/dist/sweetalert.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <!-- For carousel -->
+      <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/easytimer@1.1.1/src/easytimer.min.js"></script>
+   </body>
 </html>

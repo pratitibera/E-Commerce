@@ -1,3 +1,6 @@
+var authusertoken = localStorage.getItem('authusertoken');
+console.log(authusertoken);
+
 function productsPage() {
   var url = document.location.href,
         params = url.split('?')[1].split('&'),
@@ -9,7 +12,8 @@ function productsPage() {
     console.log(data['id']);
 
   var request = new XMLHttpRequest()
-  request.open("GET", "http://apis-dev.putatoe.com/v1/api/product/"+ data['id'], true)
+  request.open(urlSet.productsApi.method, urlSet.productsApi.url+ data['id'], true)
+  //request.open("GET", "http://apis-dev.putatoe.com/v1/api/product/"+ data['id'], true)
   request.setRequestHeader('Content-Type', 'application/json');
   request.setRequestHeader('device', 'android');
   request.send();
@@ -194,8 +198,9 @@ function addToCart(k) {
   var quantity = parseInt(document.getElementById("qtty"+k).value);
 
   var request = new XMLHttpRequest();
-  request.open("POST", "http://apis-dev.putatoe.com/v1/api/add_to_cart", true);
-  request.setRequestHeader('authtoken', '5KWAWV4RT9EW7VBF5QTTCD2BL51HP4F5A36AUD26FDURULDP7O');
+  request.open(urlSet.addToCartApi.method, urlSet.addToCartApi.url, true)
+  //request.open("POST", "http://apis-dev.putatoe.com/v1/api/add_to_cart", true);
+  request.setRequestHeader('authtoken', authusertoken);
   request.setRequestHeader('Content-Type', 'application/json');
 
   const json = {
@@ -219,7 +224,8 @@ function addToCart(k) {
 
 function sellerproductsPage() {
   var request = new XMLHttpRequest()
-  request.open("GET", "http://apis-dev.putatoe.com/v1/api/product/4", true)
+  request.open(urlSet.productsApi.method, urlSet.productsApi.url+ 4, true)
+  //request.open("GET", "http://apis-dev.putatoe.com/v1/api/product/4", true)
   request.setRequestHeader('Content-Type', 'application/json');
   request.setRequestHeader('device', 'android');
   request.send();

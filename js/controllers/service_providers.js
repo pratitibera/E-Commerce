@@ -1,3 +1,6 @@
+var authusertoken = localStorage.getItem('authusertoken');
+//console.log(authusertoken);
+
 function SellersPage()  {
   var url = document.location.href,
         params = url.split('?')[1].split('&'),
@@ -6,91 +9,78 @@ function SellersPage()  {
          tmp = params[i].split('=');
          data[tmp[0]] = tmp[1];
     }
-    console.log(data['id']);
+    //console.log(data['id']);
 
     var request = new XMLHttpRequest()
-  request.open("GET", "http://apis-dev.putatoe.com/v1/api/individual_service_providers/" + data['id'], true)
-  
+    request.open(urlSet.serviceProviderApi.method, urlSet.serviceProviderApi.url+ data['id'], true)
   request.setRequestHeader('Content-Type', 'application/json'); 
   request.send(); 
   request.onload = function () {
   	var data = JSON.parse(this.response)
-    console.log(data);
+    //console.log(data);
 
     var service_providers = document.getElementById('service_providers');
     for ( i=0; i < (data['service_provider'].length); i++) {
-      //inserting the name of the services_main_list
+      var service_title = document.createElement('b');
+      service_title.append(data['service_provider'][i]['provider']);
+
       var title = document.createElement('h5'); 
-      title.setAttribute('class','card-title');
-      title.setAttribute('style','color: black; text-transform: uppercase; font-weight: 700;');
-      title.append(data['service_provider'][i]['provider']);
+      title.setAttribute('class','service_card_body_head');
+      title.append(service_title);
+      
+      var service_card_body = document.createElement('div');
+      service_card_body.setAttribute('class', 'card-body service_card_body');
+      service_card_body.append(title);
 
       //inserting the subcategories
-      var sub_services = document.createElement('div');
-      sub_services.setAttribute('class','list-group list-group-flush');
-      
-      //for (j = 0; j < data['services_main_list'][i]['subcategory'].length; j++) {
-       // if(j<3){
-       // var item = document.createElement('p');
-       // item.setAttribute('class','list');
-       // item.setAttribute('style','color: black; text-align: center; font-size: 18px;');
-        //item.textContent = data['service_provider'][i]['available'][j]['name'];
-        //sub_services.append(item);
-        //}
-      //}
+      // for (j = 0; j < data['service_provider'][i]['available'].length; j++){
+      //   var service_card_body_subhead = document.createElement('h6');
+      //   service_card_body_subhead.append(data['service_provider'][i]['available'][j]['name']);
+      //   service_card_body.append(service_card_body_subhead);
+      // }
 
-      //inserting a button to explore about that service
-      var button = document.createElement('button');
-      button.setAttribute('class','btn btn-info');
-      button.setAttribute('style','font-size: 16px;');
-      var link = document.createElement('a');
-      link.setAttribute('id', data['service_provider'][i]['id']);
-      link.onclick = function() {Product(this.id)};
-      link.textContent = "Know more";
-      link.setAttribute('style','text-decoration: none; color: white; cursor: pointer;');
-      button.append(link);
-      sub_services.append(button);
+      var service_button = document.createElement('button');
+      service_button.setAttribute('type', 'button');
+      service_button.setAttribute('class', 'btn btn-info');
+      service_button.append("EXPLORE");
 
-      //concatenating name of service and subcategories
-      var cardDivBody = document.createElement('div');
-      cardDivBody.setAttribute('class','card-body');
-      cardDivBody.setAttribute('style','text-align: center;');
+      var service_button_link = document.createElement('a');
+      service_button_link.setAttribute('id', data['service_provider'][i]['id']);
+      service_button_link.onclick = function() {Product(this.id)};
+      service_button_link.append(service_button);
 
-      //concatenating entire cardDivBody into a section
-      var cardSection = document.createElement('div');
-      cardSection.setAttribute('class','col-sm-6');
+      var service_button_div = document.createElement('div');
+      service_button_div.setAttribute('class', 'service_card_body_button');
+      service_button_div.append(service_button_link);
+      service_card_body.append(service_button_div);
 
-      //Inserting image in the card
-      var imageOfCard = document.createElement('img');
-      imageOfCard.setAttribute('class','col-sm-6 order-sm-last order-first');
-      imageOfCard.setAttribute('src',data['service_provider'][i]['logo']);
-      imageOfCard.setAttribute('width','200');
-      imageOfCard.setAttribute('height','230');
-      imageOfCard.setAttribute('style','object-fit: cover; border-radius: .8rem;');
+      var service_details = document.createElement('div');
+      service_details.setAttribute('class', 'col-6 col-xs-6 col-sm-12 col-md-6 col-lg-6');
+      service_details.append(service_card_body);
 
-      //concatenating that section and image
-      var cardPiece = document.createElement('div');
-      cardPiece.setAttribute('class','row no-gutters');
+      var service_image = document.createElement('img');
+      service_image.setAttribute('class', 'card-img');
+      service_image.setAttribute('src', data['service_provider'][i]['logo']);
 
-      //concatenating entire cardPiece into a cardDiv
-      var cardDiv = document.createElement('div');
-      cardDiv.setAttribute('class','card');
-      cardDiv.setAttribute('style','max-width: 480px; background-color: #e6f3ff; box-shadow: 0 1.4rem 8rem rgba(0,0,0,.5); border-radius: .8rem; margin-top: 12px;');
-  
-      // storing the ready card into a div
-      var card1 = document.createElement('div');
-      card1.setAttribute('class','col-xs-12 col-sm-6 col-md-6 col-lg-4 wow fadeInLeft animated');
-      card1.setAttribute('data-wow-delay','1.0s');
+      var service_image_div = document.createElement('div');
+      service_image_div.setAttribute('class', 'col-6 col-xs-6 col-sm-12 col-md-6 col-lg-6 order-md-last order-first service_card_image');
+      service_image_div.append(service_image);
 
-      cardDivBody.append(title);
-      cardDivBody.append(sub_services);
-      cardSection.append(cardDivBody);
-      cardPiece.append(cardSection);
-      cardPiece.append(imageOfCard);
-      cardDiv.append(cardPiece);
-      card1.append(cardDiv);
-      service_providers.append(card1);
+      var service_section = document.createElement('div');
+      service_section.setAttribute('class', 'row');
+      service_section.append(service_details);
+      service_section.append(service_image_div);
 
+      var service_card = document.createElement('div');
+      service_card.setAttribute('class', 'card service_card');
+      service_card.append(service_section);
+
+      var service_grid = document.createElement('div');
+      service_grid.setAttribute('class', 'col-12 col-sm-4 col-md-6 col-lg-4 wow fadeInLeft animated');
+      service_grid.setAttribute('data-wow-delay','0.2s');
+      service_grid.append(service_card);
+
+      service_providers.append(service_grid);
     }
 
   }
@@ -99,7 +89,8 @@ function SellersPage()  {
 function Product(id1){
   //console.log(id1);
   //console.log(id2);
-  url = "http://apis-dev.putatoe.com/v1/api/product/"+id1;
+  //request.open(urlSet.serviceProviderApi.method, urlSet.serviceProviderApi.url+ data['id'], true)
+  url = urlSet.productsApi.url +id1;
     fetch(url)
     .then(response => response.json())
     .then(data => {

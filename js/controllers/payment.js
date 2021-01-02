@@ -1,6 +1,7 @@
 function paymentPage() {
 	var request = new XMLHttpRequest()
-    request.open("GET", "http://apis-dev.putatoe.com/v1/api/order/cod", true)
+    request.open(urlSet.cashOnDeliveryApi.method, urlSet.cashOnDeliveryApi.url, true)
+    //request.open("GET", "http://apis-dev.putatoe.com/v1/api/order/cod", true)
     request.setRequestHeader('Content-Type', 'application/json'); 
     request.setRequestHeader('authtoken', '5KWAWV4RT9EW7VBF5QTTCD2BL51HP4F5A36AUD26FDURULDP7O'); 
     request.send(); 
@@ -26,7 +27,8 @@ function confirmationPage() {
     order_id.append(data['id']);
 
 	var request = new XMLHttpRequest()
-    request.open("GET", "http://apis-dev.putatoe.com/v1/api/confirmation/"+data['id'], true)
+    request.open(urlSet.confirmOrderApi.method, urlSet.confirmOrderApi.url+data['id'], true)
+    //request.open("GET", "http://apis-dev.putatoe.com/v1/api/confirmation/"+data['id'], true)
     request.setRequestHeader('Content-Type', 'application/json'); 
     request.setRequestHeader('authtoken', '5KWAWV4RT9EW7VBF5QTTCD2BL51HP4F5A36AUD26FDURULDP7O'); 
     request.send(); 
@@ -304,7 +306,8 @@ function confirmationPage() {
 
 function paywithPaytm() {
     var request = new XMLHttpRequest()
-    request.open("GET", "http://apis-dev.putatoe.com/v1/api/order/paytm", true)
+    request.open(urlSet.paytmApi.method, urlSet.paytmApi.url, true)
+    //request.open("GET", "http://apis-dev.putatoe.com/v1/api/order/paytm", true)
     request.setRequestHeader('Content-Type', 'application/json'); 
     request.setRequestHeader('authtoken', '5KWAWV4RT9EW7VBF5QTTCD2BL51HP4F5A36AUD26FDURULDP7O'); 
     request.send(); 
@@ -324,7 +327,8 @@ function paywithPaytm() {
 
 function makePayment() {
     var request = new XMLHttpRequest()
-    request.open("GET", "http://apis-dev.putatoe.com/v1/api/order/paytm", true)
+    request.open(urlSet.paytmApi.method, urlSet.paytmApi.url, true)
+    //request.open("GET", "http://apis-dev.putatoe.com/v1/api/order/paytm", true)
     request.setRequestHeader('Content-Type', 'application/json'); 
     request.setRequestHeader('authtoken', '5KWAWV4RT9EW7VBF5QTTCD2BL51HP4F5A36AUD26FDURULDP7O'); 
     request.send(); 

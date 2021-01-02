@@ -3,6 +3,7 @@
     "headers": [
       {"source": "/service-worker.js", "headers": [{"key": "Cache-Control", "value": "no-cache"}]}
     ],
+    "site": "putatoeapp",
     "public": "/",
     "ignore": [
       "firebase.json",

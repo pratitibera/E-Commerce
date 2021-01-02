@@ -7,7 +7,7 @@
     <meta name="keywords" content="Putattoe, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Putatoe | Confirmation</title>
+    <title>Putatoe | Main</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
@@ -20,21 +20,56 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
     <link rel="stylesheet" href="css/header_footer.css" type="text/css">
-    <link rel="stylesheet" href="css/cart.css" type="text/css">
-   
+    <link rel="stylesheet" href="css/main.css" type="text/css">
 
-    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/t4t5/sweetalert/32bd141c/dist/sweetalert.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/t4t5/sweetalert/32bd141c/dist/sweetalert.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css"> -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <style>
-        body {
-            background-color: #D6EFF1;
+        
+        .sub_divisions{
+            padding-right:0;
+            padding-left:0;
+        }
+        .maincard{
+            padding: 8px;
+        }
+        .bigcard{
+            padding: 50px;
+            border-color: #00838f;
+            border-width:2px;
+            border-radius: 20px;
+        }
+        .big_info{
+            padding: 8px;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .big_info h3{
+            color: #00838f;
+            font-weight: bold;
+        }
+        .small_cards{
+            padding: 6px;
+            border-color: #00838f;
+            border-width:2px;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+        .small_info{
+            padding: 5px;
+            text-align: center;
+        }
+        .small_info h6{
+            color: #00838f;
+            font-weight: bold;
         }
     </style>
 </head>
 
-<body onload="confirmationPage();">
+<body onload="showCartBasket(); mainServicesPage();">
     <div id="preloder">
         <div class="loader"></div>
     </div>
@@ -73,8 +108,6 @@
                 <li><a href="#">Log Out</a></li>
             </ul>
         </div>
-        
-
     </div>
     <!-- Humberger End -->
 
@@ -110,8 +143,24 @@
                     </div>
 
                 </div>
-                <div class="col-lg-3 pt-lg-4 header__social__user__account"></div>
-        
+                <div class="col-lg-2 pt-lg-4 header__social__user__account">
+                    <div class="dropdown">
+                        <button class="btn"><i class="fa fa-shopping-cart fa-2x"></i><b>MY BASKET</b></button>
+                        <div class="dropdown-content" id="dropdown-content">
+                            <div id="cart_items">
+                            	<div style="margin-left: -20px;" id="emptycart">
+                            		<img src="img/emptycart.png" height="300" width="400">	
+                            	</div> 
+                            </div>
+                            <button class="btn btn-lg" id="totprice"></button>
+                            <a href="cart.html" id="update_btn"><button class="btn btn-lg" >Update Cart</button></a>
+                            <a href="payment.html" id="pay_btn"><button class="btn btn-lg">Place Order and proceed to pay</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-1 pt-lg-4 header__social__user__account">
+                    <button class="btn" style="font-weight: 600; background: white;"><a href="login.html" style="color: #00838f;">Login</a></button>
+                </div>
 
                 <!-- Social Links, User, Cart Option -->
                 <div class="col-lg-2 pt-lg-4 header__social__user__account">
@@ -132,81 +181,127 @@
         </div>
     </header><br>
     <!-- Header Section End -->
+
     <div class="container">
-        <div class="card" style="border-radius: 10px; padding: 28px; box-shadow: 5px 5px 15px rgba(0,0,0,0.9);">
-            <h6 style="margin-bottom: 27px; font-size: 16px; font-weight: bold;" id="order_id">ORDER ID: </h6>
-            <div class="row">
-                <div class="col-md-5">
-                    <h6 style="margin-bottom: 27px; font-size: 16px; font-weight: bold;">Delivery Address</h6>
-                    <p style="margin-bottom: 20px; font-size: 14px;" id="delivery_add"></p>
-                    <h6 style="font-size: 14px;" id="delivery_mobile"></h6>
-                </div>
-                <div class="col-md-4">
-                    <h6 style="margin-bottom: 35px; font-size: 16px; font-weight: bold;">Your Rewards</h6>
-                    <h6 style="font-size: 14px;"><img src="img/supercoin.png" height="30" width="30" style="margin-right: 5px;">6 super coins</h6>
-                    <h6 style="font-size: 14px;">Will be credited after return period is over</h6>
-                    
-                </div>
-                <div class="col-md-3">
-                    <h6 style="margin-bottom: 35px; font-size: 16px; font-weight: bold;"> More Actions</h6>
-                    <h6 style="font-size: 14px;"><img src="img/invoice.png" height="30" width="30" style="margin-right: 5px;">Download invoice</h6>
-                </div> 
-            </div> 
-        </div><br>
-            <div class="card" style="border-radius: 10px; padding: 28px; box-shadow: 5px 5px 15px rgba(0,0,0,0.9);" id="ordered_products">
-                <!-- <div class="row">
-                <div class="col-md-2" style="text-align: center;">
-                    <img src="img/1.jpg" height="150" width="150">
-                </div>
-                <div class="col-md-3">
-                    <h6 style="margin-bottom: 30px; font-size: 16px; font-weight: bold;">abc</h6>
-                    <h6 style="font-size: 14px;">Quantity: 20kg</h6>
-                    <h6 style="font-size: 14px;">Number of items: 2</h6>
-                    <h6 style="font-size: 14px;">Seller: Trends</h6>
-                    <h6 style="margin-top: 20px; font-size: 16px; font-weight: bold;">Rs 399</h6>
-                    <h6 style="font-size: 12px;">Return policy valid till 15th December</h6>
-                    <a href="#"><h6 style="font-size: 12px;">Know More</h6></a>
-                </div>
-                <div class="col-md-4">
-                    <h6 style="margin-bottom: 30px; font-size: 16px; font-weight: bold;">Track Order</h6>
-                    <div class="track">
-                        <div class="step">
-                            <span class="icon">
-                                <i class="fa fa-check"></i>
-                            </span>
-                            <span class="text">Confirmed</span>
-                        </div>
-                        <div class="step">
-                            <span class="icon">
-                                <i class="fa fa-user"></i>
-                            </span>
-                            <span class="text">Shipped</span>
-                        </div>
-                        <div class="step">
-                            <span class="icon">
-                                <i class="fa fa-truck"></i>
-                            </span>
-                            <span class="text"> On the way </span>
-                        </div>
-                        <div class="step">
-                            <span class="icon">
-                                <i class="fa fa-gift"></i>
-                            </span>
-                            <span class="text">Delivered</span>
+        <div class="row">
+            <div class="col-12 col-xs-12 col-md-12 col-sm-12 col-lg-6 divisions">
+                <div class="card" style="padding: 15px;">
+                    <div class="card bigcard">
+                        <img src="img/put1.png">
+                        <div class="big_info">
+                            <h3>The Organic Store</h3>
                         </div>
                     </div>
-                    <h6 style="margin-top: 80px; font-size: 14px;">Your Order has been shipped on : 19th November, 17:46</h6>
-                    <h6 style="font-size: 14px;"><i class="fa fa-check" style="color: #00838f;"></i>  Payment Approved</h6>
                 </div>
-                <div class="col-md-3">
-                    <h6 style="margin-bottom: 30px; font-size: 16px; font-weight: bold;">Expected Delivery: 31st November</h6>
-                    <h6><a href="#" style="font-size: 14px; color: #00838f; font-weight: bold;"><i class="fa fa-star" style="margin-right: 5px;"></i>Rate and Review Product</a></h6>
-                    <h6><a href="#" style="font-size: 14px; color: #00838f; font-weight: bold;"><i class="fa fa-window-close" style="margin-right: 5px;"></i>Return Product</a></h6>
-                    <h6><a href="#" style="font-size: 14px; color: #00838f; font-weight: bold;"><i class="fa fa-handshake-o" style="margin-right: 5px;"></i>Need Help?</a></h6>  
+            </div>
+            <div class="col-12 col-xs-12 col-md-12 col-sm-12 col-lg-6 divisions">
+                <div class="row">
+                    <div class="col-12 col-xs-12 col-md-6 col-sm-6 col-lg-6 sub_divisions">
+                        <div class="card maincard">
+                            <div class="card small_cards">
+                                <img src="img/put2.jpg">
+                                <div class="small_info">
+                                    <h6>Fresh Fruits</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xs-12 col-md-6 col-sm-6 col-lg-6 sub_divisions">
+                        <div class="card maincard">
+                            <div class="card small_cards">
+                                <img src="img/put2.jpg">
+                                <div class="small_info">
+                                    <h6>Fresh Fruits</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xs-12 col-md-6 col-sm-6 col-lg-6 sub_divisions">
+                        <div class="card maincard">
+                            <div class="card small_cards">
+                                <img src="img/put2.jpg">
+                                <div class="small_info">
+                                    <h6>Fresh Fruits</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xs-12 col-md-6 col-sm-6 col-lg-6 sub_divisions">
+                        <div class="card maincard">
+                            <div class="card small_cards">
+                                <img src="img/put2.jpg">
+                                <div class="small_info">
+                                    <h6>Fresh Fruits</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>   
+                </div> 
+            </div>  
+        </div> 
+
+        <div class="row">
+            <div class="col-12 col-xs-12 col-md-12 col-sm-12 col-lg-6 divisions">
+                <div class="row">
+                    <div class="col-12 col-xs-12 col-md-6 col-sm-6 col-lg-6 sub_divisions">
+                        <div class="card maincard">
+                            <div class="card small_cards">
+                                <img src="img/put2.jpg">
+                                <div class="small_info">
+                                    <h6>Fresh Fruits</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xs-12 col-md-6 col-sm-6 col-lg-6 sub_divisions">
+                        <div class="card maincard">
+                            <div class="card small_cards">
+                                <img src="img/put2.jpg">
+                                <div class="small_info">
+                                    <h6>Fresh Fruits</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xs-12 col-md-6 col-sm-6 col-lg-6 sub_divisions">
+                        <div class="card maincard">
+                            <div class="card small_cards">
+                                <img src="img/put2.jpg">
+                                <div class="small_info">
+                                    <h6>Fresh Fruits</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xs-12 col-md-6 col-sm-6 col-lg-6 sub_divisions">
+                        <div class="card maincard">
+                            <div class="card small_cards">
+                                <img src="img/put2.jpg">
+                                <div class="small_info">
+                                    <h6>Fresh Fruits</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>   
+                </div> 
+            </div>  
+
+            <div class="col-12 col-xs-12 col-md-12 col-sm-12 col-lg-6 divisions">
+                <div class="card" style="padding: 15px;">
+                    <div class="card bigcard">
+                        <img src="img/put1.png">
+                        <div class="big_info">
+                            <h3>The Organic Store</h3>
+                        </div>
+                    </div>
                 </div>
-            </div>  --> 
-        </div><!--end-->  
+            </div>
+        </div> 
     </div>
+   
+    
+   
+
     <!-- Footer Section Begin -->
     <footer class="footer spad mt-5">
         <div class="container">
@@ -276,9 +371,13 @@
     <script src="js/mixitup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/controllers/main.js"></script>
+    <script src="js/controllers/mybasket.js"></script>
     <script src="js/apis/urls.js" defer></script>
-    <script src="js/controllers/payment.js"></script>
 
+    <script src="js/custom.js"></script>
+    <script src="js/vendor/jquery-1.11.2.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
 
     <script>
         function myModal(nam) {

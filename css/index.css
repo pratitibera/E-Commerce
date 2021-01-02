@@ -1,95 +1,129 @@
- @media screen and (max-width: 992px) {
-            .welcome_message{
-                margin-left: -10px;
-                margin-top: -80px;
-            }
-            .message{
-                margin-top: -60px;
-            }
-           
-        }
-        .hum_address {
-            font-size: 14px;
-            padding: 40px;
-        }
-        .hum_continue {
-            height: 42px;
-            padding: 12px;
-            width: 90px;
-            background-color: #00838f;
-            color: white;
-            font-size: 14px;
-            cursor: pointer;
-            border-radius: 6%;
-        }
-        .pin_enter {
-            width: 60%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            display: inline-block;
-            border: 1px solid #00838f;
-            border-radius: 4px;
-            box-sizing: border-box;
-            margin-left: 20px;
-            font-size: 12px;
-        }
-        .pin_submit {
-            background-color: #00838f;
-            color: white;
-            padding: 10px 10px;
-            margin: 8px 0;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 14px;
-            letter-spacing: .1em;
-        }
-        .welcome_message h2{
-            font-weight: 800;
-            color: black;
-            margin-left: 40px;
-        }
-        .address {
-            background-color: white;
-            width: 490px;
-            border: 3px solid #22c3bb;
-            padding: 12px;
-            height: 48px;
-            font-size: 12px;
-        }
-        .continue {
-            height: 48px;
-            padding: 12px;
-            width: 95px;
-            background-color: #22c3bb;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-            letter-spacing: .01em;
-        }
-        .pincode {
-            width: 60%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            display: inline-block;
-            border: 1px solid #00838f;
-            border-radius: 4px;
-            box-sizing: border-box;
-            margin-left: 60px;
-            font-size: 14px;
-        }
-        .submitpin {
-            background-color: #00838f;
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 14px;
-            letter-spacing: .1em;
-        }
-        .message p{
-            margin-left: 45px;
-            color: black;
-        }
+.hum_address {
+    font-size: 14px;
+    padding: 40px;
+}
+
+.hum_continue {
+    height: 42px;
+    padding: 12px;
+    width: 90px;
+    background-color: #00838f;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 6%;
+}
+
+.pin_enter {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #00838f;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-left: 20px;
+    font-size: 12px;
+}
+
+.pin_submit {
+    background-color: #00838f;
+    color: white;
+    padding: 10px 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    letter-spacing: .1em;
+}
+
+.welcome_message h2 {
+    font-weight: 800;
+    color: black;
+    margin-left: 40px;
+}
+
+.address {
+    background-color: white;
+    width: 490px;
+    border: 3px solid #22c3bb;
+    padding: 12px;
+    height: 48px;
+    font-size: 12px;
+}
+
+.continue {
+    height: 48px;
+    padding: 12px;
+    width: 95px;
+    background-color: #22c3bb;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    letter-spacing: .01em;
+}
+
+.pincode {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #00838f;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-left: 60px;
+    font-size: 14px;
+}
+
+.submitpin {
+    background-color: #00838f;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    letter-spacing: .1em;
+}
+
+.message p {
+    margin-left: 45px;
+    color: black;
+}
+.column{
+    width: 50%;
+}
+
+@media screen and (max-width: 992px) {
+    .column {
+        float: left;
+        width: 50%;
+    }
+    /* Clearfix (clear floats) */
+    .index::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    .welcome_message {
+        margin-left: -10px;
+        margin-top: -80px;
+    }
+    .message {
+        margin-top: -60px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .column {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .column {
+        width: 100%;
+    }
+}

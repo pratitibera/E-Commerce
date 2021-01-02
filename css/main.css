@@ -1,82 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
-
-* {
-  font-family: 'Raleway', sans-serif;
-  box-sizing: border-box;
-  text-decoration: none;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+/* ----- Offers carousel ----- */
+.second{
+	display: none
 }
-
-body {
-  background: #f2f2f2;
-}
-.dropdown .btn {
-  background-color: #00838f;
-  color: white;
-}
-.dropdown .btn i {
-  margin-right: 15px;
-}
-.dropdown .btn:hover {
-  color: white;
-}
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
- display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  width: 320%;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  padding:20px;
-  right: 0;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-.cart_item {
-  font-size: 12px;
-  color: black;
-  margin-bottom: 2px;
-  line-height: normal;
-}
-.cart_item_details {
-  font-size: 16px;
-  color: black;
-  font-weight: bold;
-  padding-top: 12px;
-  line-height: normal;
-}
-.cart-quantity-input {
-    height: 24px;
-    border-radius: 3px;
-    border: 1px solid #56CCF2;
-    background-color: #eee;
-    color: #333;
-    padding: 0;
-    text-align: center;
-    font-size: 0.9em;
-    margin-right: 1px;
-}
-.btn-lg{
-  background: #00838f;
-  color: white;
-  padding: 10px;
-  font-size: 14px;
-  border-radius: 6px;
-  font-weight: bold;
-}
-
-/*Offers carousel*/
 .carousel {
-  height: 60vh;
+  height: 50vh;
 }
 .carousel-item {
   height: 100%;
@@ -92,14 +19,17 @@ body {
 }
 .carousel .flickity-prev-next-button.previous {
   left: 50px;
+  background-color: transparent;
 }
 .carousel .flickity-prev-next-button.next {
   right: 50px;
+  background-color: transparent;
 }
-/*Offers carousel ends*/
+
+/* ------ Offers carousel ends ------- */
 
 
-/*Popular products carousel*/
+/* ------- Popular products carousel -------- */
 
 .popular {
   padding: 0rem 1.5rem;
@@ -110,6 +40,10 @@ body {
   margin: 3rem 0rem;
   color:  #00838f;
   font-weight: bold;
+  margin-top: 10px;
+}
+.popular-carousel{
+  margin-top: -30px;
 }
 
 .single-item {
@@ -119,51 +53,181 @@ body {
   color: #6a6b6d;
   text-align: center;
 }
-
+.img img{
+  height: 200px;
+ width: 100%;
+}
 .single-item .img {
-  height: 230px;
+  height: 200px;
   width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  margin-bottom: 10px;
+  object-fit: cover;
 }
 
 .single-item h3{
-  font-size: 18px;
+  font-size: 16px;
+  line-height: 0.5em;
+  color: black;
   font-weight: bold;
 }
 .single-item h4{
   margin-bottom: 1rem;
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 14px;
   font-family: sans-serif;
+  line-height: 0.9em;
+  color: green;
+}
+.single-item h5{
+  font-size: 14px;
+  line-height: 0.5em;
 }
 
+/* -------- Popular products carousel ends ------ */
 
-/*Popular products carousel ends*/
+
+/* ----------- Services block -----------*/
 
 .services_head {
   margin: 3rem 0rem;
   color: #fff;
   font-weight: bold;
   text-align: center;
-
 }
+.info{
+	margin-bottom: 20px;
+}
+.service_card{
+  box-shadow: 0 1.4rem 8rem rgba(0,0,0,.5);
+  border-radius: .8rem;
+  margin-top: 12px;
+}
+.service_card_body{
+  text-align: center;
+}
+.service_card_body_head{
+  text-transform: uppercase;
+}
+.service_card_body_subhead{
+  margin: 5px;
+}
+.service_card_body_button{
+  margin: 12px;
+}
+.card-img{
+  object-fit: cover;
+  border-radius: .8rem;
+  height: 180px;
+  width: 184px;
+}
+
+.view_all_button{
+  margin-top: 10px;
+}
+
+.view_all_button a button{
+  font-weight: 600;
+  background-color: #00838f;
+  color: white;
+}
+/* ----------- Services block ends -----------*/
+
+
+/* ----------- Responsiveness -----------*/
 @media only screen and (max-width: 1500px) {
   .single-item {
     width: 15%;
   }
+  .popular{
+    margin-top: 10px;
+  }
 }
+@media only screen and (max-width: 1305px) {
+  .service_card_body_head{
+    font-size: 14px;
+  }
+  .service_card_body_subhead{
+    font-size: 14px;
+  }
+  .card-img{
+  object-fit: cover;
+  border-radius: .8rem;
+  height: 180px;
+  width: 170px;
+}
+}
+
+@media only screen and (max-width: 1200px) {
+  .service_card_body_head{
+    font-size: 14px;
+  }
+  .service_card_body_subhead{
+    font-size: 14px;
+  }
+  .card-img{
+  object-fit: cover;
+  border-radius: .8rem;
+  height: 180px;
+  width: 160px;
+}
+}
+
 
 @media only screen and (max-width: 1180px) {
   .single-item {
-    width: 20%;
+    width: 18%;
   }
+}
+
+@media only screen and (max-width: 1170px) {
+  .service_card_body_head{
+    font-size: 14px;
+  }
+  .service_card_body_subhead{
+    font-size: 14px;
+  }
+  .card-img{
+  object-fit: cover;
+  border-radius: .8rem;
+  height: 180px;
+  width: 140px;
+}
+}
+
+@media only screen and (max-width: 1050px) {
+  .service_card_body_head,
+  .service_card_body_subhead{
+    font-size: 13px;
+  }
+  .card-img{
+  object-fit: cover;
+  border-radius: .8rem;
+  height: 160px;
+  width: 130px;
+}
+}
+
+@media only screen and (max-width: 991px) {
+  .popular h2 {
+  margin-top: 20px;
+}
+  .service_card_body_head,
+  .service_card_body_subhead{
+    font-size: 16px;
+  }
+  .card-img{
+  object-fit: cover;
+  border-radius: .8rem;
+  height: 180px;
+  width: 180px;
+}
+.view_all_button a button{
+  font-size: 14px;
+}
 }
 
 @media only screen and (max-width: 980px) {
   .single-item {
-    width: 25%;
+    width: 20%;
   } 
   .carousel {
     height: auto;
@@ -180,29 +244,160 @@ body {
     width: 130%;
     margin-left: -30px;
   }
+  .view_all_button{
+  margin-top: 13px;
+}
 }
 @media only screen and (max-width: 940px) {
+  .single-item {
+    width: 22%;
+  }
+  .view_all_button{
+  margin-top: 17px;
+}
+}
+
+@media only screen and (max-width: 870px) {
+  .service_card_body_head,
+  .service_card_body_subhead{
+    font-size: 13px;
+  }
+  .card-img{
+  object-fit: cover;
+  border-radius: .8rem;
+  height: 180px;
+  width: 150px;
+}
+}
+@media only screen and (max-width: 767px) {
+  .service_card_body_head,
+  .service_card_body_subhead{
+    font-size: 16px;
+  }
+  .card-img{
+  object-fit: cover;
+  border-radius: .8rem;
+  height: 160px;
+  width: 205px;
+}
+.single-item {
+    width: 27%;
+  }
+}
+@media only screen and (max-width: 727px) {
+  .card-img{
+  object-fit: cover;
+  border-radius: .8rem;
+  height: 160px;
+  width: 190px;
+}
+}
+@media only screen and (max-width: 720px) {
   .single-item {
     width: 30%;
   }
 }
-
-@media only screen and (max-width: 768px) {
-  .single-item {
-    width: 35%;
-  }
+@media only screen and (max-width: 678px) {
+  .card-img{
+  object-fit: cover;
+  border-radius: .8rem;
+  height: 160px;
+  width: 180px;
 }
-@media only screen and (max-width: 720px) {
-  .single-item {
-    width: 40%;
-  }
+.service_card_body_subhead{
+  margin: 2px;
+}
+.service_card_body_button{
+  margin: 8px;
+}
+}
+
+@media only screen and (max-width: 646px) {
+  .card-img{
+  object-fit: cover;
+  border-radius: .8rem;
+  height: 160px;
+  width: 170px;
+}
+.service_card_body_subhead{
+  margin: 2px;
+}
+.service_card_body_button{
+  margin: 6px;
+}
+}
+@media only screen and (max-width: 628px) {
+  .card-img{
+  object-fit: cover;
+  border-radius: .8rem;
+  height: 150px;
+  width: 160px;
+}
+.service_card_body_subhead{
+  margin: 2px;
+}
+.service_card_body_button{
+  margin: 4px;
+}
 }
 @media only screen and (max-width: 620px) {
   .single-item {
-    width: 45%;
+    width: 35%;
+  }
+  .popular h2 {
+  font-size: 26px;
+  margin-top: 30px;
+}
+.view_all_button a button{
+  font-size: 12px;
+}
+.view_all_button{
+  margin-top: 25px;
+}
+}
+
+@media only screen and (max-width: 594px) {
+  .card-img{
+  object-fit: cover;
+  border-radius: .8rem;
+  height: 140px;
+  width: 150px;
+}
+.service_card_body_head,
+  .service_card_body_subhead{
+    font-size: 14px;
   }
 }
+
+@media only screen and (max-width: 575px) {
+  .card-img{
+  object-fit: cover;
+  border-radius: .8rem;
+  height: 170px;
+  width: 240px;
+}
+.service_card_body_head,
+  .service_card_body_subhead{
+    font-size: 16px;
+  }
+  .service_card_body_button a button{
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 566px) {
+  .card-img{
+  object-fit: cover;
+  border-radius: .8rem;
+  height: 170px;
+  width: 230px;
+}
+}
+
 @media only screen and (max-width: 540px) {
+  .service_card{
+    margin-left: 1px;
+  }
   .carousel .flickity-prev-next-button.previous {
     left: 40px;
   }
@@ -214,14 +409,126 @@ body {
     margin-left: -20px;
   }
 }
-@media only screen and (max-width: 510px) {
-  .single-item {
-    width: 60%;
+
+@media only screen and (max-width: 525px) {
+  .card-img{
+  object-fit: cover;
+  border-radius: .8rem;
+  height: 170px;
+  width: 220px;
+}
+.service_card_body_head,
+  .service_card_body_subhead{
+    font-size: 15px;
   }
 }
 
-@media only screen and (max-width: 380px) {
+
+
+
+@media only screen and (max-width: 510px) {
   .single-item {
-    width: 100%;
+    width: 45%;
   }
+}
+@media only screen and (max-width: 485px) {
+  .single-item {
+    width: 50%;
+  }
+  .popular h2 {
+  font-size: 20px;
+  margin-top: 30px;
+}
+.services_head {
+  font-size: 30px;
+
+}
+.view_all_button a button{
+  font-size: 10px;
+}
+.view_all_button{
+  margin-top: 28px;
+}
+}
+
+@media only screen and (max-width: 480px) {
+  .card-img{
+  object-fit: cover;
+  border-radius: .8rem;
+  height: 170px;
+  width: 200px;
+}
+.service_card_body_head,
+  .service_card_body_subhead{
+    font-size: 14px;
+  }
+  .service_card_body_button a button{
+    font-size: 14px;
+  }
+  .service_card{
+    margin-left: 0px;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .card-img{
+  object-fit: cover;
+  border-radius: .8rem;
+  height: 170px;
+  width: 180px;
+}
+.service_card_body_head,
+  .service_card_body_subhead{
+    font-size: 13px;
+  }
+  .service_card{
+    margin-left: 2px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .card-img{
+  object-fit: cover;
+  border-radius: .8rem;
+  height: 170px;
+  width: 160px;
+}
+.service_card_body_head,
+  .service_card_body_subhead{
+    font-size: 12px;
+  }
+  .service_card_body_button a button{
+    font-size: 12px;
+  }
+  .service_card{
+    margin-left: -17px;
+  }
+  .service_card{
+    margin-right: -19px;
+  }
+  .popular h2{
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 383px) {
+  .single-item {
+    width: 65%;
+  }
+  .services_head {
+  font-size: 27px;
+
+}
+.second{
+	display: block;
+}
+.first{
+	display: none;
+}
+
+.carousel-item img {
+ 
+  height: 250px;
+}
+
 }

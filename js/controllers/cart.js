@@ -6,7 +6,8 @@ function cartPage(identity) {
         document.getElementById("updatebutton").style.display = "none"; 
       }
 	  var request = new XMLHttpRequest()
-    request.open("GET", "http://apis-dev.putatoe.com/v1/api/show_cart", true)
+    request.open(urlSet.showCartApi.method, urlSet.showCartApi.url, true)
+    //request.open("GET", "http://apis-dev.putatoe.com/v1/api/show_cart", true)
     request.setRequestHeader('Content-Type', 'application/json'); 
     request.setRequestHeader('authtoken', '5KWAWV4RT9EW7VBF5QTTCD2BL51HP4F5A36AUD26FDURULDP7O'); 
     request.send(); 
@@ -158,7 +159,8 @@ function cartPage(identity) {
 
 
     var request = new XMLHttpRequest()
-    request.open("GET", "http://apis-dev.putatoe.com/v1/api/billing_page", true)
+    request.open(urlSet.billingApi.method, urlSet.billingApi.url, true)
+    //request.open("GET", "http://apis-dev.putatoe.com/v1/api/billing_page", true)
     request.setRequestHeader('Content-Type', 'application/json'); 
     request.setRequestHeader('authtoken', '5KWAWV4RT9EW7VBF5QTTCD2BL51HP4F5A36AUD26FDURULDP7O'); 
     request.send(); 
@@ -190,7 +192,8 @@ function decrementValue(i) {
 function deleteCart(b) {
   //console.log(b.id);
   var request = new XMLHttpRequest()
-  request.open("GET", "http://apis-dev.putatoe.com/v1/api/delete_from_cart/"+ b.id, true)
+  request.open(urlSet.deleteCartApi.method, urlSet.deleteCartApi.url + b.id, true)
+  //request.open("GET", "http://apis-dev.putatoe.com/v1/api/delete_from_cart/"+ b.id, true)
   request.setRequestHeader('Content-Type', 'application/json');
   //request.setRequestHeader('device', 'android');
   request.send();
@@ -242,7 +245,8 @@ function updateCart() {
     const json = {
         "cart_list": [...changedProducts]
     }
-    request.open("POST", "http://apis-dev.putatoe.com/v1/api/update_cart", true);
+    request.open(urlSet.updateCartApi.method, urlSet.updateCartApi.url, true)
+    //request.open("POST", "http://apis-dev.putatoe.com/v1/api/update_cart", true);
     request.setRequestHeader('Content-Type', 'application/json');
 
     // console.log("babel");

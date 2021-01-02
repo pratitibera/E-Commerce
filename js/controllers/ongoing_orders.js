@@ -1,6 +1,7 @@
 function ongoingOrders() {
     var request = new XMLHttpRequest();
-    request.open("GET", 'http://apis-dev.putatoe.com/v1/api/service_provider_orders/2', true);
+    request.open(urlSet.sellerOrdersApi.method, urlSet.sellerOrdersApi.url + 2, true)
+    //request.open("GET", 'http://apis-dev.putatoe.com/v1/api/service_provider_orders/2', true);
     request.setRequestHeader('Content-Type', 'application/json');
     request.send();
     request.onload = function() {
@@ -117,7 +118,8 @@ function ongoingOrders() {
 
 function pastOrders() {
     var request = new XMLHttpRequest();
-    request.open("GET", 'http://apis-dev.putatoe.com/v1/api/service_provider_orders/2', true);
+    request.open(urlSet.sellerOrdersApi.method, urlSet.sellerOrdersApi.url + 2, true)
+    //request.open("GET", 'http://apis-dev.putatoe.com/v1/api/service_provider_orders/2', true);
     request.setRequestHeader('Content-Type', 'application/json');
     request.send();
     request.onload = function() {

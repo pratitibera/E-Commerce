@@ -1,8 +1,12 @@
+var authusertoken = localStorage.getItem('authusertoken');
+console.log(authusertoken);
+
 function showCartBasket() {
     var request = new XMLHttpRequest()
-    request.open("GET", "http://apis-dev.putatoe.com/v1/api/show_cart", true)
+    request.open(urlSet.showCartApi.method, urlSet.showCartApi.url, true)
+    //request.open("GET", "http://apis-dev.putatoe.com/api/show_cart", true)
     request.setRequestHeader('Content-Type', 'application/json'); 
-    request.setRequestHeader('authtoken', '5KWAWV4RT9EW7VBF5QTTCD2BL51HP4F5A36AUD26FDURULDP7O'); 
+    request.setRequestHeader('authtoken', authusertoken);  
     request.send(); 
     request.onload = function () {
 

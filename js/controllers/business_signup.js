@@ -13,7 +13,8 @@ var zip = "";
 function serviceCategory() {
 
   var request = new XMLHttpRequest();
-  request.open("GET", "http://apis-dev.putatoe.com/v1/api/service_list", true);
+  request.open(urlSet.serviceListApi.method, urlSet.serviceListApi.url, true)
+  //request.open("GET", "http://apis-dev.putatoe.com/v1/api/service_list", true);
   request.setRequestHeader('Content-Type', 'application/json');
   request.send();
   request.onload = function() {
@@ -115,7 +116,8 @@ function registerSeller() {
   var token = localStorage.getItem("authusertoken");
 
   var request = new XMLHttpRequest();
-  request.open("POST", "http://apis-dev.putatoe.com/v1/api/registerseller", true);
+  request.open(urlSet.registerSellerApi.method, urlSet.registerSellerApi.url, true)
+  //request.open("POST", "http://apis-dev.putatoe.com/v1/api/registerseller", true);
   request.setRequestHeader('authtoken', '5KWAWV4RT9EW7VBF5QTTCD2BL51HP4F5A36AUD26FDURULDP7O');
   // request.setRequestHeader('authtoken', token);
   request.setRequestHeader('Content-Type', 'application/json');
@@ -196,7 +198,8 @@ function locateMe() {
             "token": localStorage.getItem('aToken')
           };
           var request = new XMLHttpRequest();
-          request.open("POST", "http://dev-apis.putatoe.com/v1/api/userlocation", true)
+          request.open(urlSet.userLocationApi.method, urlSet.userLocationApi.url, true)
+          //request.open("POST", "http://dev-apis.putatoe.com/v1/api/userlocation", true)
           request.setRequestHeader('Content-Type', 'application/json');
           request.send(JSON.stringify(json));
           request.onload = function () {
